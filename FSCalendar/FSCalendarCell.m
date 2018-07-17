@@ -54,7 +54,7 @@
     
     label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor blackColor];
+    label.textColor = [UIColor whiteColor];
     [self.contentView addSubview:label];
     self.titleLabel = label;
     
@@ -79,7 +79,7 @@
     self.eventIndicator = eventIndicator;
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    imageView.contentMode = UIViewContentModeBottom|UIViewContentModeCenter;
+    imageView.contentMode = UIViewContentModeTop|UIViewContentModeCenter;
     [self.contentView addSubview:imageView];
     self.imageView = imageView;
     

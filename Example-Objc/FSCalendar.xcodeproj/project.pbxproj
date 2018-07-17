@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0513802220FDA046009741DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE638CD71B89DC090006DD1A /* Main.storyboard */; };
+		05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */; };
+		05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */; };
 		30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */; };
 		30145EF11D6D754D00AA5F72 /* FSCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE638CF51B8A1F550006DD1A /* FSCalendarTests.m */; };
 		301F79CB1DFD39E700D8631E /* FSCalendarDelegationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 301F79C91DFD39E700D8631E /* FSCalendarDelegationProxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -122,6 +125,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatorlCalendarViewController.h; sourceTree = "<group>"; };
+		05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatorlCalendarViewController.m; sourceTree = "<group>"; };
+		05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarBottomCell.h; sourceTree = "<group>"; };
+		05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarBottomCell.m; sourceTree = "<group>"; };
 		30024F931BD1015300B1C04C /* DelegateAppearanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateAppearanceViewController.h; sourceTree = SOURCE_ROOT; };
 		30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateAppearanceViewController.m; sourceTree = SOURCE_ROOT; };
 		301F79C91DFD39E700D8631E /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
@@ -238,6 +245,10 @@
 			children = (
 				30024F931BD1015300B1C04C /* DelegateAppearanceViewController.h */,
 				30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */,
+				05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */,
+				05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */,
+				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
+				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
 			);
 			name = "Delegate Appearance";
 			sourceTree = "<group>";
@@ -578,7 +589,7 @@
 					};
 					EE0D7FC61B89C5D3003C287B = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = HZF422TY46;
+						DevelopmentTeam = 9CA5KUE8T7;
 					};
 					EE638CE11B8A1F550006DD1A = {
 						CreatedOnToolsVersion = 6.4;
@@ -638,6 +649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0513802220FDA046009741DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +686,9 @@
 				EE638CC91B89DB940006DD1A /* CalendarConfigViewController.m in Sources */,
 				30B0BAD01B8D8E23004B9476 /* FSCalendar.m in Sources */,
 				3065CAA81CD3506A006C218D /* FSCalendar+Deprecated.m in Sources */,
+				05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */,
 				EE638CD31B89DBE90006DD1A /* AppDelegate.m in Sources */,
+				05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */,
 				30A495551DCAD9E6000B2F31 /* FSCalendarWeekdayView.m in Sources */,
 				3092253B1B905C4300123031 /* FSCalendarConstants.m in Sources */,
 				30F4C9101E07C12B00D2EC4D /* FSCalendarDelegationFactory.m in Sources */,
@@ -900,7 +914,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HZF422TY46;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -914,7 +928,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HZF422TY46;
+				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
