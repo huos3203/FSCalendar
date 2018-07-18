@@ -64,6 +64,41 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark UI
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setNavigationBarType:YES];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self setNavigationBarType:NO];
+}
+-(void)setNavigationBarType:(BOOL)isClear
+{
+    self.navigationController.navigationBar.translucent = YES;
+    UIColor *color = isClear?[UIColor clearColor]:[UIColor whiteColor];
+    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.clipsToBounds = isClear;
+}
+#pragma mark UI事件
+
+- (IBAction)ibaBackBarAction:(id)sender {
+    
+}
+- (IBAction)ibaNewRecordAction:(id)sender {
+    
+}
+
 #pragma mark - <FSCalendarDataSource>
 - (UIImage *)calendar:(FSCalendar *)calendar imageForDate:(NSDate *)date
 {

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0513802220FDA046009741DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE638CD71B89DC090006DD1A /* Main.storyboard */; };
+		05BD8C6520FEF166003744A5 /* IBInspectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6420FEF166003744A5 /* IBInspectableView.m */; };
+		05BD8C6820FEFFFA003744A5 /* UIImageViewDotLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */; };
+		05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */; };
+		05E8BA7720FED35D00AD8914 /* 自检自查.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */; };
 		05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */; };
 		05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */; };
 		30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */; };
@@ -125,6 +129,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05BD8C6320FEF166003744A5 /* IBInspectableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IBInspectableView.h; path = Patrol/IBInspectableView.h; sourceTree = "<group>"; };
+		05BD8C6420FEF166003744A5 /* IBInspectableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IBInspectableView.m; path = Patrol/IBInspectableView.m; sourceTree = "<group>"; };
+		05BD8C6620FEFFFA003744A5 /* UIImageViewDotLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIImageViewDotLine.h; path = Patrol/UIImageViewDotLine.h; sourceTree = "<group>"; };
+		05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIImageViewDotLine.m; path = Patrol/UIImageViewDotLine.m; sourceTree = "<group>"; };
+		05BD8C6920FF1594003744A5 /* CheckSelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfViewController.h; sourceTree = "<group>"; };
+		05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelfViewController.m; sourceTree = "<group>"; };
+		05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "自检自查.storyboard"; sourceTree = "<group>"; };
 		05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatorlCalendarViewController.h; sourceTree = "<group>"; };
 		05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatorlCalendarViewController.m; sourceTree = "<group>"; };
 		05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarBottomCell.h; sourceTree = "<group>"; };
@@ -240,15 +251,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E8BA7820FED6A100AD8914 /* Patrol */ = {
+			isa = PBXGroup;
+			children = (
+				05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */,
+				05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */,
+				05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */,
+				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
+				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
+				05BD8C6320FEF166003744A5 /* IBInspectableView.h */,
+				05BD8C6420FEF166003744A5 /* IBInspectableView.m */,
+				05BD8C6620FEFFFA003744A5 /* UIImageViewDotLine.h */,
+				05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */,
+				05BD8C6920FF1594003744A5 /* CheckSelfViewController.h */,
+				05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */,
+			);
+			name = Patrol;
+			sourceTree = "<group>";
+		};
 		30024F921BD1013D00B1C04C /* Delegate Appearance */ = {
 			isa = PBXGroup;
 			children = (
 				30024F931BD1015300B1C04C /* DelegateAppearanceViewController.h */,
 				30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */,
-				05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */,
-				05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */,
-				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
-				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
 			);
 			name = "Delegate Appearance";
 			sourceTree = "<group>";
@@ -356,6 +381,7 @@
 		EE0D7FC91B89C5D3003C287B /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				05E8BA7820FED6A100AD8914 /* Patrol */,
 				EE638CD71B89DC090006DD1A /* Main.storyboard */,
 				EE638CCF1B89DBE90006DD1A /* AppDelegate.h */,
 				EE638CD01B89DBE90006DD1A /* AppDelegate.m */,
@@ -638,6 +664,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E8BA7720FED35D00AD8914 /* 自检自查.storyboard in Resources */,
 				F9564BF01E2DB8CA00FC9342 /* LaunchScreen.xib in Resources */,
 				EE638CDA1B89DC0A0006DD1A /* Main.storyboard in Resources */,
 				309A42011D992C4A004E86CB /* Images.xcassets in Resources */,
@@ -680,6 +707,7 @@
 			files = (
 				EE638CCB1B89DBAC0006DD1A /* main.m in Sources */,
 				F971A0C41F2651A7000369FD /* LunarFormatter.m in Sources */,
+				05BD8C6520FEF166003744A5 /* IBInspectableView.m in Sources */,
 				EE638CCE1B89DBD80006DD1A /* StoryboardExampleViewController.m in Sources */,
 				EECA10F81BA9C0E400945B83 /* FullScreenExampleViewController.m in Sources */,
 				30DBE3C51DC641AD005A22B7 /* FSCalendarCalculator.m in Sources */,
@@ -687,6 +715,7 @@
 				30B0BAD01B8D8E23004B9476 /* FSCalendar.m in Sources */,
 				3065CAA81CD3506A006C218D /* FSCalendar+Deprecated.m in Sources */,
 				05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */,
+				05BD8C6820FEFFFA003744A5 /* UIImageViewDotLine.m in Sources */,
 				EE638CD31B89DBE90006DD1A /* AppDelegate.m in Sources */,
 				05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */,
 				30A495551DCAD9E6000B2F31 /* FSCalendarWeekdayView.m in Sources */,
@@ -701,6 +730,7 @@
 				308B58D81CC08FFA004E812D /* ButtonsViewController.m in Sources */,
 				30B0BAD11B8D8E23004B9476 /* FSCalendarAppearance.m in Sources */,
 				30CEF9011C950C1F008EAFB1 /* FSCalendarTransitionCoordinator.m in Sources */,
+				05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */,
 				EEC9C03A1BDC9E7000383A07 /* FSCalendarCollectionView.m in Sources */,
 				301F79CC1DFD39E700D8631E /* FSCalendarDelegationProxy.m in Sources */,
 				F988B1C81EA6046700609E59 /* RangePickerViewController.m in Sources */,

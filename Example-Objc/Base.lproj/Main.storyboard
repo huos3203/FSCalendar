@@ -1,152 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eNl-k3-AIY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Data Source-->
-        <scene sceneID="Jpb-Rl-a80">
-            <objects>
-                <viewController storyboardIdentifier="PatorlCalendarViewController" id="eNl-k3-AIY" customClass="PatorlCalendarViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="isT-BZ-CAI"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rdr-ic-lPu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="crC-2p-Wfk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="日历背景" translatesAutoresizingMaskIntoConstraints="NO" id="Y6X-iE-DFW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="444" translatesAutoresizingMaskIntoConstraints="NO" id="yIi-hn-Hpl" userLabel="白透明遮照">
-                                <rect key="frame" x="10" y="68" width="390" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4XB-pr-gaT" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="78" width="390" height="400"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Tkp-qG-PW7"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsScopeHandle" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="fakedSelectedDay">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="yyyy/MM"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="eNl-k3-AIY" id="hnO-Nu-IBB"/>
-                                    <outlet property="delegate" destination="eNl-k3-AIY" id="uFM-cs-hHp"/>
-                                </connections>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qwk-5G-Baw">
-                                <rect key="frame" x="20" y="518" width="370" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="370" id="1Um-KX-z6v"/>
-                                    <constraint firstAttribute="height" constant="100" id="lc9-uZ-5IH"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P3T-5O-IJx">
-                                    <size key="itemSize" width="100" height="99"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarBottomCell" id="ApF-1d-VLs" customClass="CalendarBottomCell">
-                                        <rect key="frame" x="0.0" y="0.66666666666666663" width="100" height="99"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18/34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdK-dp-G0U">
-                                                    <rect key="frame" x="20.666666666666671" y="5" width="59" height="59"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="bdK-dp-G0U" secondAttribute="height" id="S7R-P8-zfX"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="ygY-5U-4VJ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="常规检查" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZy-sO-FSq">
-                                                    <rect key="frame" x="21.333333333333332" y="74" width="57.333333333333343" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="bZy-sO-FSq" firstAttribute="centerX" secondItem="ApF-1d-VLs" secondAttribute="centerX" id="8dp-7V-UMg"/>
-                                            <constraint firstItem="bZy-sO-FSq" firstAttribute="top" secondItem="bdK-dp-G0U" secondAttribute="bottom" constant="10" id="MLk-jp-uIq"/>
-                                            <constraint firstItem="bdK-dp-G0U" firstAttribute="centerX" secondItem="ApF-1d-VLs" secondAttribute="centerX" id="N28-o1-6KI"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="bZy-sO-FSq" secondAttribute="bottom" id="bwX-oO-EBk"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="ibSubTitleLabel" destination="bZy-sO-FSq" id="Fg6-2w-uD9"/>
-                                            <outlet property="ibTitleLabel" destination="bdK-dp-G0U" id="kvO-zf-SUD"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="eNl-k3-AIY" id="Oah-fL-4mD"/>
-                                    <outlet property="delegate" destination="eNl-k3-AIY" id="TA4-2s-U50"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yIi-hn-Hpl" secondAttribute="trailing" constant="14" id="3Bf-bY-SOo"/>
-                            <constraint firstItem="Y6X-iE-DFW" firstAttribute="top" secondItem="crC-2p-Wfk" secondAttribute="top" id="81Q-GS-3bx"/>
-                            <constraint firstItem="Rdr-ic-lPu" firstAttribute="top" secondItem="Y6X-iE-DFW" secondAttribute="bottom" id="Dqv-IH-bYB"/>
-                            <constraint firstItem="yIi-hn-Hpl" firstAttribute="top" secondItem="isT-BZ-CAI" secondAttribute="bottom" constant="48" id="GP5-UO-Gxe"/>
-                            <constraint firstItem="yIi-hn-Hpl" firstAttribute="bottom" secondItem="Qwk-5G-Baw" secondAttribute="bottom" constant="30" id="Ig1-Xy-T11"/>
-                            <constraint firstItem="4XB-pr-gaT" firstAttribute="leading" secondItem="yIi-hn-Hpl" secondAttribute="leading" id="XWn-ag-epf"/>
-                            <constraint firstItem="yIi-hn-Hpl" firstAttribute="leading" secondItem="crC-2p-Wfk" secondAttribute="leading" constant="10" id="cZ0-hA-wci"/>
-                            <constraint firstItem="Qwk-5G-Baw" firstAttribute="leading" secondItem="crC-2p-Wfk" secondAttribute="leadingMargin" id="eZp-gZ-V4D"/>
-                            <constraint firstItem="Y6X-iE-DFW" firstAttribute="leading" secondItem="crC-2p-Wfk" secondAttribute="leading" id="hdf-SM-N21"/>
-                            <constraint firstItem="Qwk-5G-Baw" firstAttribute="centerX" secondItem="yIi-hn-Hpl" secondAttribute="centerX" id="hzO-iP-KRb"/>
-                            <constraint firstAttribute="trailing" secondItem="Y6X-iE-DFW" secondAttribute="trailing" id="lIt-fK-1WX"/>
-                            <constraint firstItem="4XB-pr-gaT" firstAttribute="centerX" secondItem="yIi-hn-Hpl" secondAttribute="centerX" id="s1I-gq-nii"/>
-                            <constraint firstItem="yIi-hn-Hpl" firstAttribute="top" secondItem="4XB-pr-gaT" secondAttribute="top" constant="-10" id="vo2-3K-hld"/>
-                            <constraint firstItem="Qwk-5G-Baw" firstAttribute="top" secondItem="4XB-pr-gaT" secondAttribute="bottom" constant="40" id="wCS-nx-bWJ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="calendar" destination="4XB-pr-gaT" id="bN5-wO-vxb"/>
-                        <outlet property="ibCollectionView" destination="Qwk-5G-Baw" id="m3A-89-lo3"/>
-                        <outlet property="ibWhiteView" destination="yIi-hn-Hpl" id="4d4-hq-HN2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7RG-rw-vHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4372.463768115942" y="780.97826086956525"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hBW-Rp-I6M">
             <objects>
@@ -492,7 +354,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_month" textLabel="qol-Mc-4nA" style="IBUITableViewCellStyleDefault" id="GpG-sh-Z79">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_month" textLabel="qol-Mc-4nA" style="IBUITableViewCellStyleDefault" id="GpG-sh-Z79">
                                         <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GpG-sh-Z79" id="ndN-kE-CsB">
@@ -509,7 +371,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_week" textLabel="IbE-ao-K9G" style="IBUITableViewCellStyleDefault" id="Hqm-gV-y6n">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_week" textLabel="IbE-ao-K9G" style="IBUITableViewCellStyleDefault" id="Hqm-gV-y6n">
                                         <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hqm-gV-y6n" id="eX8-Cw-vtY">
@@ -526,7 +388,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="mWw-Yo-w7e" imageView="lHd-eg-ONH" style="IBUITableViewCellStyleDefault" id="d4I-Mu-gPK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="mWw-Yo-w7e" imageView="lHd-eg-ONH" style="IBUITableViewCellStyleDefault" id="d4I-Mu-gPK">
                                         <rect key="frame" x="0.0" y="143.33333333333334" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4I-Mu-gPK" id="xt8-50-Tc2">
@@ -958,6 +820,5 @@
     <resources>
         <image name="icon_cat" width="18" height="15"/>
         <image name="icon_setting" width="24" height="24"/>
-        <image name="日历背景" width="375" height="667"/>
     </resources>
 </document>
