@@ -30,6 +30,14 @@
     // Do any additional setup after loading the view.
     _ibNextStepButton.layer.cornerRadius = 10;
     _ibNextStepButton.layer.masksToBounds = YES;
+    _ibuserImageView.layer.cornerRadius = _ibuserImageView.frame.size.width/2;
+    _ibuserImageView.layer.masksToBounds = YES;
+    //地址
+    
+    //当前日期
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd  hh:mm";
+    _ibCheckDateLabel.text = [dateFormatter stringFromDate:[NSDate new]];
 }
 
 - (void)didReceiveMemoryWarning {
