@@ -16,7 +16,7 @@
 @interface CheckSelfThirdViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
-
+@property (strong, nonatomic) NSMutableArray *checkList;
 @end
 
 @implementation CheckSelfThirdViewController
@@ -32,6 +32,31 @@
     _baseInfo.checkType = @"常规检查";
     _baseInfo.checkDate = @"2018.12.3 12:50";
     _baseInfo.storeType = @"学校食堂";
+}
+
+-(NSMutableArray *)checkList
+{
+    if (!_checkList) {
+        _checkList = [NSMutableArray new];
+        CheckSelfModel *model1 = [CheckSelfModel new];
+        model1.step = ThirdStep;
+        model1.status = OptionalCheck;
+        model1.type = SwitchType;
+        CheckSelfModel *model2 = [CheckSelfModel new];
+        model2.step = ThirdStep;
+        model2.status = CheckPassed;
+        model2.type = PullType;
+        CheckSelfModel *model3 = [CheckSelfModel new];
+        model3.step = ThirdStep;
+        model3.status = NotPassed;
+        model3.type = PullType;
+        CheckSelfModel *model4 = [CheckSelfModel new];
+        model4.step = ThirdStep;
+        model4.status = NotPassed;
+        model4.type = SwitchType;
+        [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
+    }
+    return _checkList;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +76,7 @@
             number = _baseInfo.infoArr.count;
             break;
         case 1:
-            number = 4;
+            number = self.checkList.count;
             break;
         case 2:
             number = 1;
@@ -92,7 +117,7 @@
     if (indexPath.section == 1) {
         cellId = @"checkSelfCell";
         CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        cell.checkModel = [CheckSelfModel new];
+        cell.checkModel = self.checkList[indexPath.row];
         return cell;
     }
     //备注

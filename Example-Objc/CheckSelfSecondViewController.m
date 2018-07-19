@@ -13,17 +13,41 @@
 @property (strong, nonatomic) IBOutlet UIImageView *ibCheckStatusImageView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 @property (strong, nonatomic) IBOutlet UIView *ibTableHeaderView;
-
+@property (strong, nonatomic) NSMutableArray *checkList;
 
 @end
 
 @implementation CheckSelfSecondViewController
-
+{
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+-(NSMutableArray *)checkList
+{
+    if (!_checkList) {
+        _checkList = [NSMutableArray new];
+        CheckSelfModel *model1 = [CheckSelfModel new];
+        model1.step = SecondStep;
+        model1.status = OptionalCheck;
+        model1.type = PullType;
+        CheckSelfModel *model2 = [CheckSelfModel new];
+        model2.step = SecondStep;
+        model2.status = CheckPassed;
+        model2.type = PullType;
+        CheckSelfModel *model3 = [CheckSelfModel new];
+        model3.step = SecondStep;
+        model3.status = NotPassed;
+        model3.type = PullType;
+        CheckSelfModel *model4 = [CheckSelfModel new];
+        model4.step = SecondStep;
+        model4.status = CheckPassed;
+        model4.type = SwitchType;
+        [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
+    }
+    return _checkList;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -69,7 +93,7 @@
     if (section == 1) {
         return 1;
     }
-    return 5;
+    return self.checkList.count;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -96,7 +120,7 @@
         return cell;
     }
     CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
-    cell.checkModel = [CheckSelfModel new];
+    cell.checkModel = self.checkList[indexPath.row];
     cell.delegate = self;
     return cell;
 }

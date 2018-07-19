@@ -291,10 +291,10 @@
 			children = (
 				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
 				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
-				05BD8C6F20FF435B003744A5 /* CheckSelfCell.h */,
-				05BD8C7020FF435B003744A5 /* CheckSelfCell.m */,
 				05B800D821006DC400765222 /* BaseInfoCell.h */,
 				05B800D921006DC400765222 /* BaseInfoCell.m */,
+				05BD8C6F20FF435B003744A5 /* CheckSelfCell.h */,
+				05BD8C7020FF435B003744A5 /* CheckSelfCell.m */,
 				05B800DD2100875500765222 /* CheckNoteCell.h */,
 				05B800DE2100875500765222 /* CheckNoteCell.m */,
 				05B800E02100876900765222 /* CheckSignCell.h */,

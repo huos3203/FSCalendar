@@ -43,7 +43,50 @@
 -(void)setCheckModel:(CheckSelfModel *)checkModel
 {
     _checkModel = checkModel;
-    if (checkModel.type != SwitchType) {
+    //拍照按钮初始化
+    if (_checkModel.imgArr.count > 0) {
+        _ibImgNumberView.hidden = NO;
+        _ibPaizhaoButton.hidden = NO;
+        _ibImgNumberLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_checkModel.imgArr.count];
+        CheckImgModel *imgModel = _checkModel.imgArr[0];
+        [_ibPaizhaoButton setImage:imgModel.image forState:UIControlStateNormal];
+    }else{
+        _ibImgNumberView.hidden = YES;
+        if (checkModel.step == ThirdStep) {
+            _ibPaizhaoButton.hidden = YES;
+        }else{
+            _ibPaizhaoButton.hidden = NO;
+            [_ibPaizhaoButton setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
+        }
+    }
+    
+    //步骤三 初始化cell
+    if (checkModel.step == ThirdStep) {
+        if (checkModel.status == OptionalCheck) {
+            _ibPullView.hidden = NO;
+            _ibSwitchButton.hidden = YES;
+            _ibPullTypeLabel.text = @"合理缺项";
+        }else{
+            _ibPullView.hidden = YES;
+            _ibSwitchButton.hidden = NO;
+            if (checkModel.status == CheckPassed) {
+                _ibSwitchButton.selected = YES;
+                _ibSwitchButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"第三步状态"]];
+            }else{
+                _ibSwitchButton.selected = NO;
+                _ibSwitchButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"第三步状态2"]];
+            }
+            _ibSwitchButton.layer.cornerRadius = _ibSwitchButton.frame.size.height/2;
+            _ibSwitchButton.layer.masksToBounds = YES;
+        }
+        
+        if (_checkModel.imgArr.count > 0){
+            
+        }
+        return;
+    }
+    //步骤二初始化cell
+    if (checkModel.type == SwitchType) {
         _ibPullView.hidden = YES;
         _ibSwitchButton.hidden = NO;
         _ibSwitchButton.selected = checkModel.status == CheckPassed?YES:NO;
@@ -51,7 +94,7 @@
         _ibPullView.hidden = NO;
         _ibSwitchButton.hidden = YES;
         NSString *typeNam = @"";
-        switch (1) {
+        switch (checkModel.status) {
             case OptionalCheck:
                 typeNam = @"合理缺项";
                 break;
@@ -63,17 +106,6 @@
                 break;
         }
         _ibPullTypeLabel.text = typeNam;
-    }
-    
-    //拍照按钮初始化
-    if (_checkModel.imgArr.count > 0) {
-        _ibImgNumberView.hidden = NO;
-        _ibImgNumberLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_checkModel.imgArr.count];
-        CheckImgModel *imgModel = _checkModel.imgArr[0];
-        [_ibPaizhaoButton setImage:imgModel.image forState:UIControlStateNormal];
-    }else{
-        _ibImgNumberView.hidden = YES;
-        [_ibPaizhaoButton setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
     }
 }
 - (IBAction)ibaPaizhaoAction:(id)sender {

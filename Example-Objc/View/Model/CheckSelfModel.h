@@ -17,6 +17,10 @@ typedef enum : NSUInteger {
     SwitchType,
     PullType,
 } CheckSelfCellType;
+typedef enum : NSUInteger {
+    SecondStep,
+    ThirdStep,
+} CheckStepType;
 
 @interface CheckImgModel:NSObject
 @property (strong, nonatomic) NSString *path;
@@ -27,6 +31,7 @@ typedef enum : NSUInteger {
 @interface CheckSelfModel : NSObject
 //是否可编辑
 @property (assign, nonatomic) NSString *Id;
+@property(assign,nonatomic)CheckStepType step;
 @property(assign,nonatomic)CheckSelfStatus status;
 @property (assign, nonatomic)CheckSelfCellType type;
 @property (strong, nonatomic) NSMutableArray<CheckImgModel *> *imgArr;
