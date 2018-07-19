@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CheckSelfModel;
+#import "CheckSelfModel.h"
+
+@protocol CheckSelfDelegate
+
+@optional
+
+@end
+
+
 @interface CheckSelfCell : UITableViewCell
 @property (strong, nonatomic) CheckSelfModel *checkModel;
+@property (strong, nonatomic) id<CheckSelfDelegate> delegate;
 @end

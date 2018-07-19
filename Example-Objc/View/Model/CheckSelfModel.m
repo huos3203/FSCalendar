@@ -7,7 +7,8 @@
 //
 
 #import "CheckSelfModel.h"
-
+@implementation CheckImgModel
+@end
 @implementation CheckSelfModel
 
 @end

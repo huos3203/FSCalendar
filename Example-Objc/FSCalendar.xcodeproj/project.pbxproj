@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0513802220FDA046009741DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE638CD71B89DC090006DD1A /* Main.storyboard */; };
+		05B800D2210065A900765222 /* BaseInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D1210065A900765222 /* BaseInfoModel.m */; };
+		05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D421006D5900765222 /* CheckSelfThirdViewController.m */; };
+		05B800DA21006DC400765222 /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
+		05B800DF2100875500765222 /* CheckNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800DE2100875500765222 /* CheckNoteCell.m */; };
+		05B800E22100876900765222 /* CheckSignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800E12100876900765222 /* CheckSignCell.m */; };
 		05BD8C6520FEF166003744A5 /* IBInspectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6420FEF166003744A5 /* IBInspectableView.m */; };
 		05BD8C6820FEFFFA003744A5 /* UIImageViewDotLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */; };
 		05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */; };
@@ -132,6 +137,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05B800D0210065A900765222 /* BaseInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfoModel.h; sourceTree = "<group>"; };
+		05B800D1210065A900765222 /* BaseInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfoModel.m; sourceTree = "<group>"; };
+		05B800D321006D5900765222 /* CheckSelfThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfThirdViewController.h; sourceTree = "<group>"; };
+		05B800D421006D5900765222 /* CheckSelfThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelfThirdViewController.m; sourceTree = "<group>"; };
+		05B800D821006DC400765222 /* BaseInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfoCell.h; sourceTree = "<group>"; };
+		05B800D921006DC400765222 /* BaseInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfoCell.m; sourceTree = "<group>"; };
+		05B800DD2100875500765222 /* CheckNoteCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckNoteCell.h; sourceTree = "<group>"; };
+		05B800DE2100875500765222 /* CheckNoteCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckNoteCell.m; sourceTree = "<group>"; };
+		05B800E02100876900765222 /* CheckSignCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSignCell.h; sourceTree = "<group>"; };
+		05B800E12100876900765222 /* CheckSignCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSignCell.m; sourceTree = "<group>"; };
 		05BD8C6320FEF166003744A5 /* IBInspectableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBInspectableView.h; sourceTree = "<group>"; };
 		05BD8C6420FEF166003744A5 /* IBInspectableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBInspectableView.m; sourceTree = "<group>"; };
 		05BD8C6620FEFFFA003744A5 /* UIImageViewDotLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewDotLine.h; sourceTree = "<group>"; };
@@ -260,20 +275,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B800DB21006F7A00765222 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05BD8C7320FF4E65003744A5 /* CheckSelfModel.h */,
+				05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */,
+				05B800D0210065A900765222 /* BaseInfoModel.h */,
+				05B800D1210065A900765222 /* BaseInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05B800DC21006F8E00765222 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
+				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
+				05BD8C6F20FF435B003744A5 /* CheckSelfCell.h */,
+				05BD8C7020FF435B003744A5 /* CheckSelfCell.m */,
+				05B800D821006DC400765222 /* BaseInfoCell.h */,
+				05B800D921006DC400765222 /* BaseInfoCell.m */,
+				05B800DD2100875500765222 /* CheckNoteCell.h */,
+				05B800DE2100875500765222 /* CheckNoteCell.m */,
+				05B800E02100876900765222 /* CheckSignCell.h */,
+				05B800E12100876900765222 /* CheckSignCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		05BD8C7220FF46EB003744A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05B800DC21006F8E00765222 /* Cell */,
+				05B800DB21006F7A00765222 /* Model */,
 				05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */,
-				05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */,
-				05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */,
 				05BD8C6320FEF166003744A5 /* IBInspectableView.h */,
 				05BD8C6420FEF166003744A5 /* IBInspectableView.m */,
 				05BD8C6620FEFFFA003744A5 /* UIImageViewDotLine.h */,
 				05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */,
-				05BD8C6F20FF435B003744A5 /* CheckSelfCell.h */,
-				05BD8C7020FF435B003744A5 /* CheckSelfCell.m */,
-				05BD8C7320FF4E65003744A5 /* CheckSelfModel.h */,
-				05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +327,8 @@
 				05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */,
 				05BD8C6C20FF3804003744A5 /* CheckSelfSecondViewController.h */,
 				05BD8C6D20FF3804003744A5 /* CheckSelfSecondViewController.m */,
+				05B800D321006D5900765222 /* CheckSelfThirdViewController.h */,
+				05B800D421006D5900765222 /* CheckSelfThirdViewController.m */,
 			);
 			name = Patrol;
 			sourceTree = "<group>";
@@ -735,6 +776,7 @@
 				EECA10F81BA9C0E400945B83 /* FullScreenExampleViewController.m in Sources */,
 				30DBE3C51DC641AD005A22B7 /* FSCalendarCalculator.m in Sources */,
 				EE638CC91B89DB940006DD1A /* CalendarConfigViewController.m in Sources */,
+				05B800E22100876900765222 /* CheckSignCell.m in Sources */,
 				30B0BAD01B8D8E23004B9476 /* FSCalendar.m in Sources */,
 				3065CAA81CD3506A006C218D /* FSCalendar+Deprecated.m in Sources */,
 				05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */,
@@ -742,9 +784,11 @@
 				EE638CD31B89DBE90006DD1A /* AppDelegate.m in Sources */,
 				05BD8C7520FF4E65003744A5 /* CheckSelfModel.m in Sources */,
 				05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */,
+				05B800DA21006DC400765222 /* BaseInfoCell.m in Sources */,
 				30A495551DCAD9E6000B2F31 /* FSCalendarWeekdayView.m in Sources */,
 				05BD8C7120FF435B003744A5 /* CheckSelfCell.m in Sources */,
 				3092253B1B905C4300123031 /* FSCalendarConstants.m in Sources */,
+				05B800DF2100875500765222 /* CheckNoteCell.m in Sources */,
 				30F4C9101E07C12B00D2EC4D /* FSCalendarDelegationFactory.m in Sources */,
 				309539901C38D66C00BD37AA /* FSCalendarCollectionViewLayout.m in Sources */,
 				30FCB3971BAAD112002B87AD /* FSCalendarStickyHeader.m in Sources */,
@@ -752,8 +796,10 @@
 				EE638CD41B89DBE90006DD1A /* FSTableViewController.m in Sources */,
 				302811471DCA296400F8CED2 /* DIYCalendarCell.m in Sources */,
 				3065CA971CD31B81006C218D /* FSCalendarScopeHandle.m in Sources */,
+				05B800D2210065A900765222 /* BaseInfoModel.m in Sources */,
 				308B58D81CC08FFA004E812D /* ButtonsViewController.m in Sources */,
 				30B0BAD11B8D8E23004B9476 /* FSCalendarAppearance.m in Sources */,
+				05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */,
 				30CEF9011C950C1F008EAFB1 /* FSCalendarTransitionCoordinator.m in Sources */,
 				05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */,
 				EEC9C03A1BDC9E7000383A07 /* FSCalendarCollectionView.m in Sources */,
@@ -972,7 +1018,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenchaod.FSCalendarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -986,7 +1032,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9CA5KUE8T7;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenchaod.FSCalendarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

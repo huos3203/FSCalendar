@@ -7,12 +7,12 @@
 //
 
 #import "CheckSelfSecondViewController.h"
+#import "CheckSelfCell.h"
 
-@interface CheckSelfSecondViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CheckSelfSecondViewController ()<UITableViewDataSource,UITableViewDelegate,CheckSelfDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *ibCheckStatusImageView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 @property (strong, nonatomic) IBOutlet UIView *ibTableHeaderView;
-
 
 
 @end
@@ -95,7 +95,9 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NextStepCell"];
         return cell;
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
+    CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
+    cell.checkModel = [CheckSelfModel new];
+    cell.delegate = self;
     return cell;
 }
 
