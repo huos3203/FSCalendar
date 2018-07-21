@@ -19,4 +19,6 @@
 @interface CheckSelfCell : UITableViewCell
 @property (strong, nonatomic) CheckSelfModel *checkModel;
 @property (strong, nonatomic) id<CheckSelfDelegate> delegate;
+//拍照广场
+@property (strong, nonatomic) void(^AlertCameraView)(NSArray *);
 @end

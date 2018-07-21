@@ -7,6 +7,7 @@
 //
 
 #import "CheckSelfCell.h"
+#import "CameraModel.h"
 
 @interface CheckSelfCell()
 @property (strong, nonatomic) IBOutlet UIButton *ibPaizhaoButton;
@@ -48,7 +49,7 @@
         _ibImgNumberView.hidden = NO;
         _ibPaizhaoButton.hidden = NO;
         _ibImgNumberLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_checkModel.imgArr.count];
-        CheckImgModel *imgModel = _checkModel.imgArr[0];
+        CameraModel *imgModel = _checkModel.imgArr[0];
         [_ibPaizhaoButton setImage:imgModel.image forState:UIControlStateNormal];
     }else{
         _ibImgNumberView.hidden = YES;
@@ -113,13 +114,15 @@
     if (_checkModel.imgArr.count > 0) {
         //TODO:预览
         NSMutableArray *previewArr = [NSMutableArray new];
-        for (CheckImgModel *path in _checkModel.imgArr) {
+        for (CameraModel *path in _checkModel.imgArr) {
             [previewArr addObject:path];
         }
-        
+        if (self.AlertCameraView) {
+            self.AlertCameraView(self.checkModel.imgArr);
+        }
     }else{
         //TODO: 拍照
-
+        
     }
 }
 

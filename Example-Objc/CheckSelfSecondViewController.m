@@ -8,12 +8,16 @@
 
 #import "CheckSelfSecondViewController.h"
 #import "CheckSelfCell.h"
+#import "CameraCollView.h"
 
 @interface CheckSelfSecondViewController ()<UITableViewDataSource,UITableViewDelegate,CheckSelfDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *ibCheckStatusImageView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 @property (strong, nonatomic) IBOutlet UIView *ibTableHeaderView;
 @property (strong, nonatomic) NSMutableArray *checkList;
+
+@property (strong, nonatomic) IBOutlet ShadeBootomView *ibCameraView;
+@property (strong, nonatomic) IBOutlet CameraCollView *ibCameraCollectionView;
 
 @end
 
@@ -121,10 +125,29 @@
     }
     CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
     cell.checkModel = self.checkList[indexPath.row];
+    __weak typeof(self) weakSelf = self;
+    cell.AlertCameraView = ^(NSArray *imgArr) {
+        [weakSelf alertCameraView];
+        weakSelf.ibCameraCollectionView.imgArr = [imgArr mutableCopy];
+    };
     cell.delegate = self;
     return cell;
 }
 
+-(void)alertCameraView
+{
+    _ibCameraView.frame = [UIScreen mainScreen].bounds;
+    _ibCameraView.alpha = 0;
+    [self.view addSubview:_ibCameraView];
+    [UIView transitionWithView:_ibCameraCollectionView
+                      duration:.5
+                    options:UIViewAnimationOptionTransitionFlipFromTop
+                    animations:^{
+                        _ibCameraView.alpha = 1;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
+}
 
 
 @end

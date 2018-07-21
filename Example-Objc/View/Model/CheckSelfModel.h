@@ -22,17 +22,12 @@ typedef enum : NSUInteger {
     ThirdStep,
 } CheckStepType;
 
-@interface CheckImgModel:NSObject
-@property (strong, nonatomic) NSString *path;
-@property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) UIImage *image;
-@end
-
+@class CameraModel;
 @interface CheckSelfModel : NSObject
 //是否可编辑
 @property (assign, nonatomic) NSString *Id;
 @property(assign,nonatomic)CheckStepType step;
 @property(assign,nonatomic)CheckSelfStatus status;
 @property (assign, nonatomic)CheckSelfCellType type;
-@property (strong, nonatomic) NSMutableArray<CheckImgModel *> *imgArr;
+@property (strong, nonatomic) NSMutableArray<CameraModel *> *imgArr;
 @end

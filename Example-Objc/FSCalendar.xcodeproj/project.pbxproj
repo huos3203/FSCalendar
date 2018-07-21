@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0513802220FDA046009741DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE638CD71B89DC090006DD1A /* Main.storyboard */; };
+		057E6FCD2102CC9E00035C99 /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCC2102CC9E00035C99 /* CameraCell.m */; };
+		057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCF2102D08C00035C99 /* CameraCollView.m */; };
+		057E6FD42102D46800035C99 /* CameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FD32102D46800035C99 /* CameraModel.m */; };
 		05B800D2210065A900765222 /* BaseInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D1210065A900765222 /* BaseInfoModel.m */; };
 		05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D421006D5900765222 /* CheckSelfThirdViewController.m */; };
 		05B800DA21006DC400765222 /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
@@ -137,6 +140,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		057E6FCB2102CC9E00035C99 /* CameraCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraCell.h; sourceTree = "<group>"; };
+		057E6FCC2102CC9E00035C99 /* CameraCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraCell.m; sourceTree = "<group>"; };
+		057E6FCE2102D08C00035C99 /* CameraCollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraCollView.h; sourceTree = "<group>"; };
+		057E6FCF2102D08C00035C99 /* CameraCollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraCollView.m; sourceTree = "<group>"; };
+		057E6FD22102D46800035C99 /* CameraModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraModel.h; sourceTree = "<group>"; };
+		057E6FD32102D46800035C99 /* CameraModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraModel.m; sourceTree = "<group>"; };
 		05B800D0210065A900765222 /* BaseInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfoModel.h; sourceTree = "<group>"; };
 		05B800D1210065A900765222 /* BaseInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfoModel.m; sourceTree = "<group>"; };
 		05B800D321006D5900765222 /* CheckSelfThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfThirdViewController.h; sourceTree = "<group>"; };
@@ -275,6 +284,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057E6FD12102D3D300035C99 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				057E6FD22102D46800035C99 /* CameraModel.h */,
+				057E6FD32102D46800035C99 /* CameraModel.m */,
+				057E6FCB2102CC9E00035C99 /* CameraCell.h */,
+				057E6FCC2102CC9E00035C99 /* CameraCell.m */,
+				057E6FCE2102D08C00035C99 /* CameraCollView.h */,
+				057E6FCF2102D08C00035C99 /* CameraCollView.m */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		05B800DB21006F7A00765222 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +328,7 @@
 		05BD8C7220FF46EB003744A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				057E6FD12102D3D300035C99 /* CameraView */,
 				05B800DC21006F8E00765222 /* Cell */,
 				05B800DB21006F7A00765222 /* Model */,
 				05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */,
@@ -803,10 +826,13 @@
 				30CEF9011C950C1F008EAFB1 /* FSCalendarTransitionCoordinator.m in Sources */,
 				05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */,
 				EEC9C03A1BDC9E7000383A07 /* FSCalendarCollectionView.m in Sources */,
+				057E6FD42102D46800035C99 /* CameraModel.m in Sources */,
 				301F79CC1DFD39E700D8631E /* FSCalendarDelegationProxy.m in Sources */,
 				F988B1C81EA6046700609E59 /* RangePickerViewController.m in Sources */,
 				30D55B101C90240000BB43D5 /* HidePlaceholderViewController.m in Sources */,
+				057E6FCD2102CC9E00035C99 /* CameraCell.m in Sources */,
 				3055B1C31DA9323A002AFA13 /* FSCalendarExtensions.m in Sources */,
+				057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */,
 				3031F3EF1CDEDFC500C174D7 /* DIYExampleViewController.m in Sources */,
 				EE52AE181B91E68A00016662 /* FSCalendarScopeExampleViewController.m in Sources */,
 				30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */,
