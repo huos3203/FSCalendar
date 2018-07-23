@@ -136,7 +136,6 @@
     //归档
     if (!_infoModel) {
         //解档
-        
         if (!_infoModel){
             _infoModel = [BaseInfoModel unArhive:[BaseInfoModel class]];
             if (_infoModel) return _infoModel;
