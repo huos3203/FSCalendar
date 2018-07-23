@@ -870,7 +870,7 @@
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="hIL-4s-jqz" kind="show" id="AM3-za-PN6"/>
+                                                        <segue destination="hIL-4s-jqz" kind="show" identifier="CheckSelfThirdViewController" id="AM3-za-PN6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1161,10 +1161,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-Dt-fDS" userLabel="经营者">
-                                                    <rect key="frame" x="0.0" y="-0.33333333333333215" width="375" height="54.666666666666657"/>
+                                                    <rect key="frame" x="0.0" y="-0.66666666666666785" width="375" height="55.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH4-38-ZmM" userLabel="line2">
-                                                            <rect key="frame" x="0.0" y="53.666666666666671" width="375" height="1"/>
+                                                            <rect key="frame" x="0.0" y="54.333333333333329" width="375" height="1"/>
                                                             <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="0.5" id="DJc-YF-CCz"/>
@@ -1174,16 +1174,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经营者名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DU-ce-EOB">
-                                                            <rect key="frame" x="45.000000000000007" y="18.666666666666664" width="76.666666666666686" height="18"/>
+                                                            <rect key="frame" x="45.000000000000007" y="19.333333333333336" width="76.666666666666686" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="经营者名称" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-lX-1oA">
-                                                            <rect key="frame" x="20" y="20.666666666666664" width="15" height="13"/>
+                                                            <rect key="frame" x="20" y="21.333333333333336" width="15" height="13"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="245" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="庆丰包子铺上地店庆丰包子铺上" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGK-oa-f1x">
-                                                            <rect key="frame" x="129.66666666666663" y="9" width="235.33333333333337" height="38"/>
+                                                            <rect key="frame" x="129.66666666666663" y="9.3333333333333321" width="235.33333333333337" height="38"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="38" id="yXQ-C8-0TR"/>
                                                             </constraints>
@@ -1192,7 +1192,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本年度第6次检查" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jc-ZU-dAj">
-                                                            <rect key="frame" x="279" y="38.666666666666671" width="86" height="13.333333333333336"/>
+                                                            <rect key="frame" x="279" y="39.333333333333329" width="86" height="13"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1255,14 +1255,14 @@
                                                     <rect key="frame" x="25" y="43.666666666666664" width="26" height="14"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片数量" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-8K-1qB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="26" height="14"/>
+                                                            <rect key="frame" x="0.0" y="0.3333333333333357" width="26" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="4Pc-8K-1qB" secondAttribute="height" multiplier="13:7" id="Y6B-Xd-Lk9"/>
                                                                 <constraint firstAttribute="height" constant="14" id="gfQ-sG-hu8"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-mK-pgN">
-                                                            <rect key="frame" x="13" y="2" width="6" height="11"/>
+                                                            <rect key="frame" x="13" y="2.3333333333333357" width="6" height="11"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1279,7 +1279,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" horizontalCompressionResistancePriority="749" text="是否有许可证是否有许可证是否有许可证是否有许可证" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-rW-rgU">
-                                                    <rect key="frame" x="56" y="17.666666666666671" width="172" height="36"/>
+                                                    <rect key="frame" x="56.000000000000014" y="17.666666666666671" width="172.33333333333337" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="YbB-Vb-z2V"/>
                                                     </constraints>
@@ -1288,7 +1288,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="746" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-lx-vCs" userLabel="事件按钮">
-                                                    <rect key="frame" x="61" y="20.666666666666671" width="182" height="30"/>
+                                                    <rect key="frame" x="61.000000000000014" y="20.666666666666671" width="182.33333333333337" height="30"/>
                                                     <state key="normal">
                                                         <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -1297,10 +1297,10 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="灰箭头" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-HU-EoQ">
-                                                    <rect key="frame" x="236" y="29" width="7" height="13"/>
+                                                    <rect key="frame" x="236.33333333333334" y="29" width="7" height="13"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw2-ac-WcC" userLabel="垂直line">
-                                                    <rect key="frame" x="245" y="23" width="0.66666666666665719" height="25"/>
+                                                    <rect key="frame" x="245.33333333333334" y="23" width="0.33333333333334281" height="25"/>
                                                     <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="0.5" id="kTZ-oN-oNN"/>
@@ -1320,9 +1320,12 @@
                                                                 <constraint firstAttribute="height" constant="30" id="TVL-Ri-K5e"/>
                                                                 <constraint firstAttribute="width" constant="65" id="xc5-E9-iQy"/>
                                                             </constraints>
-                                                            <state key="normal" title="是"/>
-                                                            <state key="selected" title="否">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <state key="normal" title="否">
+                                                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <state key="selected" title="是">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="ibCheckStatusAction:" destination="id9-1Y-soy" eventType="touchUpInside" id="Z0K-SJ-6Ud"/>
@@ -1495,7 +1498,7 @@
                                                     </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDU-J2-aJz" userLabel="line">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.33333333333333331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.66666666666666663"/>
                                                     <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="83Y-RF-3Nz"/>

@@ -26,20 +26,22 @@
         cell.title = titleArr[i];
         cell.icon = iconArr[i];
         cell.name = self.nameArr[i];
+        cell.checkNum = self.nameArr.lastObject;
         [cellArr addObject:cell];
     }
     return [cellArr copy];
 }
 -(NSArray *)nameArr
 {
-    NSMutableArray *arr = [NSMutableArray new];
-    [arr addObject:_storeName];
-    [arr addObject:_checkType];
-    [arr addObject:_checkDate];
-    [arr addObject:_storeType];
-    return [arr copy];
+    if (!_nameArr) {
+        NSMutableArray *arr = [NSMutableArray new];
+        [arr addObject:_StoreName];
+        [arr addObject:_InspectTypeName];
+        [arr addObject:_InspectDate];
+        [arr addObject:_InspectTypeName];
+        [arr addObject:_YearTimes];
+        _nameArr = [arr copy];
+    }
+    return _nameArr;
 }
-
-
-
 @end

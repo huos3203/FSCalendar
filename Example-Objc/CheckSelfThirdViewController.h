@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CheckSelfThirdViewController : UIViewController
-
+@property (strong, nonatomic) NSMutableArray *checkList;
 @end

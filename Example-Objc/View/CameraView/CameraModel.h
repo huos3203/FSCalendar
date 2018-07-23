@@ -6,10 +6,10 @@
 //  Copyright © 2018年 wenchaoios. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ArchiveModel.h"
 #import <UIKit/UIKit.h>
 
-@interface CameraModel : NSObject
+@interface CameraModel : ArchiveModel
 @property (strong, nonatomic) NSString *path;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) UIImage *image;

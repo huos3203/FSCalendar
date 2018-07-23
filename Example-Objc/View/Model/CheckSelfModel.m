@@ -8,6 +8,7 @@
 
 #import "CheckSelfModel.h"
 #import "CameraModel.h"
+
 @implementation CheckSelfModel
 
 -(NSMutableArray<CameraModel *> *)imgArr
@@ -21,4 +22,5 @@
     _imgArr = [NSMutableArray arrayWithObjects:item, item2,nil];
     return _imgArr;
 }
+
 @end

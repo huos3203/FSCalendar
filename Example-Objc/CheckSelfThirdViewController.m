@@ -16,7 +16,6 @@
 @interface CheckSelfThirdViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
-@property (strong, nonatomic) NSMutableArray *checkList;
 @end
 
 @implementation CheckSelfThirdViewController
@@ -27,36 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _baseInfo = [BaseInfoModel new];
-    _baseInfo.storeName = @"庆丰包子铺上地店";
-    _baseInfo.checkType = @"常规检查";
-    _baseInfo.checkDate = @"2018.12.3 12:50";
-    _baseInfo.storeType = @"学校食堂";
-}
-
--(NSMutableArray *)checkList
-{
-    if (!_checkList) {
-        _checkList = [NSMutableArray new];
-        CheckSelfModel *model1 = [CheckSelfModel new];
-        model1.step = ThirdStep;
-        model1.status = OptionalCheck;
-        model1.type = SwitchType;
-        CheckSelfModel *model2 = [CheckSelfModel new];
-        model2.step = ThirdStep;
-        model2.status = CheckPassed;
-        model2.type = PullType;
-        CheckSelfModel *model3 = [CheckSelfModel new];
-        model3.step = ThirdStep;
-        model3.status = NotPassed;
-        model3.type = PullType;
-        CheckSelfModel *model4 = [CheckSelfModel new];
-        model4.step = ThirdStep;
-        model4.status = NotPassed;
-        model4.type = SwitchType;
-        [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
-    }
-    return _checkList;
+    _baseInfo = [BaseInfoModel unArhive:NSClassFromString([BaseInfoModel class])];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,7 +87,9 @@
     if (indexPath.section == 1) {
         cellId = @"checkSelfCell";
         CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        cell.checkModel = self.checkList[indexPath.row];
+        CheckSelfModel *model = self.checkList[indexPath.row];
+        model.step = ThirdStep;
+        cell.checkModel = model;
         return cell;
     }
     //备注

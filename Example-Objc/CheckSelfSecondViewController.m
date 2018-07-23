@@ -7,8 +7,10 @@
 //
 
 #import "CheckSelfSecondViewController.h"
+#import "CheckSelfThirdViewController.h"
 #import "CheckSelfCell.h"
 #import "CameraCollView.h"
+#import "ArchiveModel.h"
 
 @interface CheckSelfSecondViewController ()<UITableViewDataSource,UITableViewDelegate,CheckSelfDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *ibCheckStatusImageView;
@@ -28,30 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
--(NSMutableArray *)checkList
-{
-    if (!_checkList) {
-        _checkList = [NSMutableArray new];
-        CheckSelfModel *model1 = [CheckSelfModel new];
-        model1.step = SecondStep;
-        model1.status = OptionalCheck;
-        model1.type = PullType;
-        CheckSelfModel *model2 = [CheckSelfModel new];
-        model2.step = SecondStep;
-        model2.status = CheckPassed;
-        model2.type = PullType;
-        CheckSelfModel *model3 = [CheckSelfModel new];
-        model3.step = SecondStep;
-        model3.status = NotPassed;
-        model3.type = PullType;
-        CheckSelfModel *model4 = [CheckSelfModel new];
-        model4.step = SecondStep;
-        model4.status = CheckPassed;
-        model4.type = SwitchType;
-        [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
-    }
-    return _checkList;
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,6 +44,14 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    NSString *path = [ArchiveModel pathOf:NSStringFromClass([self class])];
+    //将数据归档到path文件路径里面
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.checkList toFile:path];
+    if (success) {
+        NSLog(@"归档成功");
+    }else {
+        NSLog(@"归档失败");
+    }
     [self setNavigationBarType:NO];
 }
 - (IBAction)ibaBackBarAction:(id)sender {
@@ -124,7 +111,9 @@
         return cell;
     }
     CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
-    cell.checkModel = self.checkList[indexPath.row];
+    CheckSelfModel *model = self.checkList[indexPath.row];
+    model.step = SecondStep;
+    cell.checkModel = model;
     __weak typeof(self) weakSelf = self;
     cell.AlertCameraView = ^(NSArray *imgArr) {
         [weakSelf alertCameraView];
@@ -134,6 +123,17 @@
     return cell;
 }
 
+#pragma mark segue事件
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"CheckSelfThirdViewController"]) {
+        //
+        CheckSelfThirdViewController *third = segue.destinationViewController;
+        third.checkList = self.checkList;
+    }
+}
+
+#pragma mark 拍照广场页面
 -(void)alertCameraView
 {
     _ibCameraView.frame = [UIScreen mainScreen].bounds;
@@ -149,5 +149,35 @@
                     }];
 }
 
+#pragma mark setter/getter
+-(NSMutableArray *)checkList
+{
+    if (!_checkList) {
+        NSString *path = [ArchiveModel pathOf:NSStringFromClass([self class])];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            _checkList =  [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        }else{
+            _checkList = [NSMutableArray new];
+            CheckSelfModel *model1 = [CheckSelfModel new];
+            model1.step = SecondStep;
+            model1.status = OptionalCheck;
+            model1.type = PullType;
+            CheckSelfModel *model2 = [CheckSelfModel new];
+            model2.step = SecondStep;
+            model2.status = CheckPassed;
+            model2.type = PullType;
+            CheckSelfModel *model3 = [CheckSelfModel new];
+            model3.step = SecondStep;
+            model3.status = NotPassed;
+            model3.type = PullType;
+            CheckSelfModel *model4 = [CheckSelfModel new];
+            model4.step = SecondStep;
+            model4.status = CheckPassed;
+            model4.type = SwitchType;
+            [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
+        }
+    }
+    return _checkList;
+}
 
 @end

@@ -8,6 +8,7 @@
 
 #import "CheckSelfViewController.h"
 #import "IBInspectableView.h"
+#import "BaseInfoModel.h"
 
 @interface CheckSelfViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *ibuserImageView;
@@ -20,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *ibNextStepButton;
 @property (strong, nonatomic) IBOutlet UILabel *ibCheckTypeLabel;
 @property (strong, nonatomic) IBOutlet IBInspectableView *ibUserInfoView;
-
+@property (strong, nonatomic) BaseInfoModel *infoModel;
 @end
 
 @implementation CheckSelfViewController
@@ -32,12 +33,7 @@
     _ibNextStepButton.layer.masksToBounds = YES;
     _ibuserImageView.layer.cornerRadius = _ibuserImageView.frame.size.width/2;
     _ibuserImageView.layer.masksToBounds = YES;
-    //地址
     
-    //当前日期
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd  hh:mm";
-    _ibCheckDateLabel.text = [dateFormatter stringFromDate:[NSDate new]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +54,8 @@
 {
     [super viewWillDisappear:animated];
     [self setNavigationBarType:NO];
+    //归档
+    [self.infoModel arhive];
 }
 -(void)setNavigationBarType:(BOOL)isClear
 {
@@ -73,8 +71,40 @@
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.clipsToBounds = isClear;
 }
-#pragma mark UI事件
 
+#pragma mark UI数据
+-(void)setupBaseInfoData
+{
+    //TODO: 头像
+//    NSDictionary *did = [LoginAndRegister currentUserMessage];
+//    _userHeadurl = [did objectForKey:@"userHeadurl"];
+//    [_ibuserImageView setImageFromUrl:_userModel.userHeadurl];
+
+    //人员实名
+    //    NSDictionary *employeeInfo = [LoginAndRegister currentUserEmployeeInfo];
+//    NSString *employeeName = [employeeInfo objectForKey:@"Name"];
+//    if (![employeeName isEqualToString:@""]
+//        && employeeName != nil
+//        && ![employeeName isKindOfClass:[NSNull class]]) {
+//    _ibUsernameLabel.text = employeeName;
+//    }
+
+    _ibStoreNameLabel.text = @"";
+    _ibCheckTypeLabel.text = @"";
+    _ibCheckNumLabel.text = [NSString stringWithFormat:@"本年度第%d次检查",5];
+    //TODO: 地址
+    
+    //当前日期
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd  hh:mm";
+    _ibCheckDateLabel.text = [dateFormatter stringFromDate:[NSDate new]];
+    self.infoModel.StoreName = _ibStoreNameLabel.text;
+    self.infoModel.InspectTypeName = _ibCheckTypeLabel.text;
+    self.infoModel.YearTimes  = _ibCheckNumLabel.text;
+    self.infoModel.InspectDate = _ibCheckDateLabel.text;
+    self.infoModel.InspectTypeName = @"";
+}
+#pragma mark UI事件
 - (IBAction)ibaBackBarAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -100,6 +130,20 @@
     
 }
 
-
+#pragma mark setter/getter
+-(BaseInfoModel *)infoModel
+{
+    //归档
+    if (!_infoModel) {
+        //解档
+        
+        if (!_infoModel){
+            _infoModel = [BaseInfoModel unArhive:[BaseInfoModel class]];
+            if (_infoModel) return _infoModel;
+            _infoModel = [BaseInfoModel new];
+        }
+    }
+    return _infoModel;
+}
 
 @end

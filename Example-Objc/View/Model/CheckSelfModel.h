@@ -6,7 +6,7 @@
 //  Copyright © 2018年 wenchaoios. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ArchiveModel.h"
 #import <UIKit/UIKit.h>
 typedef enum : NSUInteger {
     OptionalCheck,
@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 } CheckStepType;
 
 @class CameraModel;
-@interface CheckSelfModel : NSObject
+@interface CheckSelfModel : ArchiveModel
 //是否可编辑
 @property (assign, nonatomic) NSString *Id;
 @property(assign,nonatomic)CheckStepType step;

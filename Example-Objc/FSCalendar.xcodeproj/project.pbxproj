@@ -8,9 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0513802220FDA046009741DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE638CD71B89DC090006DD1A /* Main.storyboard */; };
+		053019D1210340DA0078F59E /* CheckSelfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */; };
+		053019D2210340DA0078F59E /* BaseInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D1210065A900765222 /* BaseInfoModel.m */; };
+		053019D3210340DA0078F59E /* IBInspectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6420FEF166003744A5 /* IBInspectableView.m */; };
+		053019D4210340DA0078F59E /* UIImageViewDotLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */; };
+		053019D5210340DA0078F59E /* PatorlCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */; };
+		053019D6210340DA0078F59E /* CheckSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */; };
+		053019D7210340DA0078F59E /* CheckSelfSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6D20FF3804003744A5 /* CheckSelfSecondViewController.m */; };
+		053019D8210340DA0078F59E /* CheckSelfThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D421006D5900765222 /* CheckSelfThirdViewController.m */; };
+		053019D9210340DF0078F59E /* CalendarBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */; };
+		053019DA210340DF0078F59E /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
+		053019DB210340DF0078F59E /* CheckSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7020FF435B003744A5 /* CheckSelfCell.m */; };
+		053019DC210340DF0078F59E /* CheckNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800DE2100875500765222 /* CheckNoteCell.m */; };
+		053019DD210340DF0078F59E /* CheckSignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800E12100876900765222 /* CheckSignCell.m */; };
+		053019DE210340E50078F59E /* CameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FD32102D46800035C99 /* CameraModel.m */; };
+		053019DF210340E50078F59E /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCC2102CC9E00035C99 /* CameraCell.m */; };
+		053019E0210340E50078F59E /* CameraCollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCF2102D08C00035C99 /* CameraCollView.m */; };
 		057E6FCD2102CC9E00035C99 /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCC2102CC9E00035C99 /* CameraCell.m */; };
 		057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCF2102D08C00035C99 /* CameraCollView.m */; };
 		057E6FD42102D46800035C99 /* CameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FD32102D46800035C99 /* CameraModel.m */; };
+		057E6FDD21033E2B00035C99 /* CheckSelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FDC21033E2B00035C99 /* CheckSelf.m */; };
+		057E6FDE21033E2B00035C99 /* CheckSelf.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 057E6FDB21033E2B00035C99 /* CheckSelf.h */; };
 		05B800D2210065A900765222 /* BaseInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D1210065A900765222 /* BaseInfoModel.m */; };
 		05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D421006D5900765222 /* CheckSelfThirdViewController.m */; };
 		05B800DA21006DC400765222 /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
@@ -23,6 +41,7 @@
 		05BD8C7120FF435B003744A5 /* CheckSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7020FF435B003744A5 /* CheckSelfCell.m */; };
 		05BD8C7520FF4E65003744A5 /* CheckSelfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */; };
 		05E8BA7720FED35D00AD8914 /* 自检自查.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */; };
+		05EF3E4F21057B41007F7E56 /* ArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E4E21057B41007F7E56 /* ArchiveModel.m */; };
 		05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */; };
 		05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */; };
 		30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30024F941BD1015300B1C04C /* DelegateAppearanceViewController.m */; };
@@ -126,6 +145,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		057E6FD721033E2B00035C99 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				057E6FDE21033E2B00035C99 /* CheckSelf.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE638CFE1B8A1F550006DD1A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +175,10 @@
 		057E6FCF2102D08C00035C99 /* CameraCollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraCollView.m; sourceTree = "<group>"; };
 		057E6FD22102D46800035C99 /* CameraModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraModel.h; sourceTree = "<group>"; };
 		057E6FD32102D46800035C99 /* CameraModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraModel.m; sourceTree = "<group>"; };
+		057E6FD921033E2B00035C99 /* libCheckSelf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCheckSelf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		057E6FDB21033E2B00035C99 /* CheckSelf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelf.h; sourceTree = "<group>"; };
+		057E6FDC21033E2B00035C99 /* CheckSelf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelf.m; sourceTree = "<group>"; };
+		057E6FE621033E8F00035C99 /* CheckSource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckSource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B800D0210065A900765222 /* BaseInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfoModel.h; sourceTree = "<group>"; };
 		05B800D1210065A900765222 /* BaseInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfoModel.m; sourceTree = "<group>"; };
 		05B800D321006D5900765222 /* CheckSelfThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfThirdViewController.h; sourceTree = "<group>"; };
@@ -169,6 +202,8 @@
 		05BD8C7320FF4E65003744A5 /* CheckSelfModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfModel.h; sourceTree = "<group>"; };
 		05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelfModel.m; sourceTree = "<group>"; };
 		05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "自检自查.storyboard"; sourceTree = "<group>"; };
+		05EF3E4D21057B41007F7E56 /* ArchiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchiveModel.h; sourceTree = "<group>"; };
+		05EF3E4E21057B41007F7E56 /* ArchiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchiveModel.m; sourceTree = "<group>"; };
 		05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatorlCalendarViewController.h; sourceTree = "<group>"; };
 		05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatorlCalendarViewController.m; sourceTree = "<group>"; };
 		05FD8F0320FDE38000CB9712 /* CalendarBottomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarBottomCell.h; sourceTree = "<group>"; };
@@ -253,6 +288,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		057E6FD621033E2B00035C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057E6FE321033E8F00035C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30671DC41D6D574C00BCFC4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +346,22 @@
 			path = CameraView;
 			sourceTree = "<group>";
 		};
+		057E6FDA21033E2B00035C99 /* CheckSelf */ = {
+			isa = PBXGroup;
+			children = (
+				057E6FDB21033E2B00035C99 /* CheckSelf.h */,
+				057E6FDC21033E2B00035C99 /* CheckSelf.m */,
+			);
+			path = CheckSelf;
+			sourceTree = "<group>";
+		};
+		057E6FE721033E8F00035C99 /* CheckSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckSource;
+			sourceTree = "<group>";
+		};
 		05B800DB21006F7A00765222 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +369,8 @@
 				05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */,
 				05B800D0210065A900765222 /* BaseInfoModel.h */,
 				05B800D1210065A900765222 /* BaseInfoModel.m */,
+				05EF3E4D21057B41007F7E56 /* ArchiveModel.h */,
+				05EF3E4E21057B41007F7E56 /* ArchiveModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +517,8 @@
 				EE0D7FC91B89C5D3003C287B /* Example */,
 				EE638CF21B8A1F550006DD1A /* FSCalendarTests */,
 				F9384A631E3ACEFB001601E0 /* FSCalendarExampleUITests */,
+				057E6FDA21033E2B00035C99 /* CheckSelf */,
+				057E6FE721033E8F00035C99 /* CheckSource */,
 				EE0D7FC81B89C5D3003C287B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -461,6 +530,8 @@
 				EE638CE21B8A1F550006DD1A /* FSCalendar.framework */,
 				30671DC71D6D574C00BCFC4E /* FSCalendarTests.xctest */,
 				F9384A621E3ACEFB001601E0 /* FSCalendarExampleUITests.xctest */,
+				057E6FD921033E2B00035C99 /* libCheckSelf.a */,
+				057E6FE621033E8F00035C99 /* CheckSource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -614,6 +685,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		057E6FD821033E2B00035C99 /* CheckSelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057E6FDF21033E2B00035C99 /* Build configuration list for PBXNativeTarget "CheckSelf" */;
+			buildPhases = (
+				057E6FD521033E2B00035C99 /* Sources */,
+				057E6FD621033E2B00035C99 /* Frameworks */,
+				057E6FD721033E2B00035C99 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckSelf;
+			productName = CheckSelf;
+			productReference = 057E6FD921033E2B00035C99 /* libCheckSelf.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		057E6FE521033E8F00035C99 /* CheckSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057E6FE921033E8F00035C99 /* Build configuration list for PBXNativeTarget "CheckSource" */;
+			buildPhases = (
+				057E6FE221033E8F00035C99 /* Sources */,
+				057E6FE321033E8F00035C99 /* Frameworks */,
+				057E6FE421033E8F00035C99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckSource;
+			productName = CheckSource;
+			productReference = 057E6FE621033E8F00035C99 /* CheckSource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		30671DC61D6D574C00BCFC4E /* FSCalendarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30671DCE1D6D574C00BCFC4E /* Build configuration list for PBXNativeTarget "FSCalendarTests" */;
@@ -696,6 +801,14 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = wenchaoios;
 				TargetAttributes = {
+					057E6FD821033E2B00035C99 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
+					057E6FE521033E8F00035C99 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
 					30671DC61D6D574C00BCFC4E = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = EE0D7FC61B89C5D3003C287B;
@@ -735,11 +848,20 @@
 				EE638CE11B8A1F550006DD1A /* FSCalendar */,
 				30671DC61D6D574C00BCFC4E /* FSCalendarTests */,
 				F9384A611E3ACEFB001601E0 /* FSCalendarExampleUITests */,
+				057E6FD821033E2B00035C99 /* CheckSelf */,
+				057E6FE521033E8F00035C99 /* CheckSource */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		057E6FE421033E8F00035C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30671DC51D6D574C00BCFC4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,6 +899,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		057E6FD521033E2B00035C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053019D9210340DF0078F59E /* CalendarBottomCell.m in Sources */,
+				053019E0210340E50078F59E /* CameraCollView.m in Sources */,
+				057E6FDD21033E2B00035C99 /* CheckSelf.m in Sources */,
+				053019DB210340DF0078F59E /* CheckSelfCell.m in Sources */,
+				053019D2210340DA0078F59E /* BaseInfoModel.m in Sources */,
+				053019D4210340DA0078F59E /* UIImageViewDotLine.m in Sources */,
+				053019D6210340DA0078F59E /* CheckSelfViewController.m in Sources */,
+				053019DD210340DF0078F59E /* CheckSignCell.m in Sources */,
+				053019D5210340DA0078F59E /* PatorlCalendarViewController.m in Sources */,
+				053019DE210340E50078F59E /* CameraModel.m in Sources */,
+				053019D8210340DA0078F59E /* CheckSelfThirdViewController.m in Sources */,
+				053019DA210340DF0078F59E /* BaseInfoCell.m in Sources */,
+				053019D1210340DA0078F59E /* CheckSelfModel.m in Sources */,
+				053019D7210340DA0078F59E /* CheckSelfSecondViewController.m in Sources */,
+				053019DF210340E50078F59E /* CameraCell.m in Sources */,
+				053019D3210340DA0078F59E /* IBInspectableView.m in Sources */,
+				053019DC210340DF0078F59E /* CheckNoteCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057E6FE221033E8F00035C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30671DC31D6D574C00BCFC4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -831,6 +984,7 @@
 				F988B1C81EA6046700609E59 /* RangePickerViewController.m in Sources */,
 				30D55B101C90240000BB43D5 /* HidePlaceholderViewController.m in Sources */,
 				057E6FCD2102CC9E00035C99 /* CameraCell.m in Sources */,
+				05EF3E4F21057B41007F7E56 /* ArchiveModel.m in Sources */,
 				3055B1C31DA9323A002AFA13 /* FSCalendarExtensions.m in Sources */,
 				057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */,
 				3031F3EF1CDEDFC500C174D7 /* DIYExampleViewController.m in Sources */,
@@ -906,6 +1060,96 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		057E6FE021033E2B00035C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		057E6FE121033E2B00035C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		057E6FEA21033E8F00035C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CheckSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clcw.CheckSource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		057E6FEB21033E8F00035C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CheckSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clcw.CheckSource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		30671DCF1D6D574C00BCFC4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1152,6 +1396,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		057E6FDF21033E2B00035C99 /* Build configuration list for PBXNativeTarget "CheckSelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057E6FE021033E2B00035C99 /* Debug */,
+				057E6FE121033E2B00035C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057E6FE921033E8F00035C99 /* Build configuration list for PBXNativeTarget "CheckSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057E6FEA21033E8F00035C99 /* Debug */,
+				057E6FEB21033E8F00035C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30671DCE1D6D574C00BCFC4E /* Build configuration list for PBXNativeTarget "FSCalendarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

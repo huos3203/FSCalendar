@@ -29,9 +29,8 @@
     _ibNameLabel.text = model.name;
     _ibTitleLabel.text = model.title;
     if ([model.title isEqualToString:@"检查时间"]) {
-        //
         _ibCheckNumberLabel.hidden = NO;
-        _ibCheckNumberLabel.text = [NSString stringWithFormat:@"本年度第%@次检查",model.checkNum];
+        _ibCheckNumberLabel.text = model.checkNum;
     }
     
 }
