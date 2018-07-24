@@ -8,6 +8,7 @@
 
 #import "PatorlCalendarViewController.h"
 #import "CalendarBottomCell.h"
+#import "CheckSelfViewController.h"
 
 @interface PatorlCalendarViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,FSCalendarDelegate>
 @property (strong, nonatomic) IBOutlet FSCalendar *calendar;
@@ -127,6 +128,14 @@
     }
 }
 
+#pragma mark segue 事件
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"CheckSelfViewController"]) {
+        CheckSelfViewController *check = segue.destinationViewController;
+        check.storeId = @"1234";
+    }
+}
 
 
 #pragma mark -UIcollectionView Datasource

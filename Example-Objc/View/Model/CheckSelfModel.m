@@ -9,7 +9,23 @@
 #import "CheckSelfModel.h"
 #import "CameraModel.h"
 
+@implementation SelfInspectModel
+
+@end
+
+
 @implementation CheckSelfModel
+
+-(instancetype)initWithModel:(SelfInspectModel *)model
+{
+    if (self = [super init]) {
+        self.status = NotPassed;
+        self.Text = model.Text;
+        self.type = model.IsNotForAll?PullType:SwitchType;
+        self.IsNeedPic = [NSNumber numberWithBool:model.IsNeedPic];
+    }
+    return self;
+}
 
 -(NSMutableArray<CameraModel *> *)imgArr
 {
@@ -22,5 +38,5 @@
     _imgArr = [NSMutableArray arrayWithObjects:item, item2,nil];
     return _imgArr;
 }
-
 @end
+

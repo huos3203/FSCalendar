@@ -21,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *ibNextStepButton;
 @property (strong, nonatomic) IBOutlet UILabel *ibCheckTypeLabel;
 @property (strong, nonatomic) IBOutlet IBInspectableView *ibUserInfoView;
-@property (strong, nonatomic) BaseInfoModel *infoModel;
+@property (strong, nonatomic) ArchiveInfoModel *arcInfoModel;
 @end
 
 @implementation CheckSelfViewController
@@ -34,6 +34,8 @@
     _ibuserImageView.layer.cornerRadius = _ibuserImageView.frame.size.width/2;
     _ibuserImageView.layer.masksToBounds = YES;
     
+    //数据
+    [self setupBaseInfo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +50,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+    //边框线
     [_ibUserInfoView drawBorderPath];
 }
 -(void)viewWillDisappear:(BOOL)animated
@@ -55,7 +58,7 @@
     [super viewWillDisappear:animated];
     [self setNavigationBarType:NO];
     //归档
-    [self.infoModel arhive];
+    [self.arcInfoModel arhive];
 }
 -(void)setNavigationBarType:(BOOL)isClear
 {
@@ -73,37 +76,34 @@
 }
 
 #pragma mark UI数据
--(void)setupBaseInfoData
+-(void)setupBaseInfo
+{
+    if (self.arcInfoModel && [self.arcInfoModel.StoreId isEqualToString:_storeId]) {
+        [self infoView:self.arcInfoModel];
+    }else{
+        //TODO: 网络
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.arcInfoModel = [[BaseInfoModel new] archiveModel];
+            [self infoView:self.arcInfoModel];
+        }];
+    }
+}
+
+-(void)infoView:(ArchiveInfoModel *)model
 {
     //TODO: 头像
-//    NSDictionary *did = [LoginAndRegister currentUserMessage];
-//    _userHeadurl = [did objectForKey:@"userHeadurl"];
-//    [_ibuserImageView setImageFromUrl:_userModel.userHeadurl];
-
+//    [_ibuserImageView setImageFromUrl:model.UserIcon];
     //人员实名
-    //    NSDictionary *employeeInfo = [LoginAndRegister currentUserEmployeeInfo];
-//    NSString *employeeName = [employeeInfo objectForKey:@"Name"];
-//    if (![employeeName isEqualToString:@""]
-//        && employeeName != nil
-//        && ![employeeName isKindOfClass:[NSNull class]]) {
-//    _ibUsernameLabel.text = employeeName;
-//    }
-
-    _ibStoreNameLabel.text = @"";
-    _ibCheckTypeLabel.text = @"";
-    _ibCheckNumLabel.text = [NSString stringWithFormat:@"本年度第%d次检查",5];
+    _ibUsernameLabel.text = model.UserName;
+    _ibStoreNameLabel.text = model.StoreName;
+    _ibCheckTypeLabel.text = model.InspectTypeName;
+    _ibCheckNumLabel.text = model.YearTimes;
     //TODO: 地址
     
     //当前日期
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd  hh:mm";
-    _ibCheckDateLabel.text = [dateFormatter stringFromDate:[NSDate new]];
-    self.infoModel.StoreName = _ibStoreNameLabel.text;
-    self.infoModel.InspectTypeName = _ibCheckTypeLabel.text;
-    self.infoModel.YearTimes  = _ibCheckNumLabel.text;
-    self.infoModel.InspectDate = _ibCheckDateLabel.text;
-    self.infoModel.InspectTypeName = @"";
+    _ibCheckDateLabel.text = model.InspectDate;
 }
+
 #pragma mark UI事件
 - (IBAction)ibaBackBarAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -131,18 +131,13 @@
 }
 
 #pragma mark setter/getter
--(BaseInfoModel *)infoModel
+-(ArchiveInfoModel *)arcInfoModel
 {
-    //归档
-    if (!_infoModel) {
+    if (!_arcInfoModel) {
         //解档
-        if (!_infoModel){
-            _infoModel = [BaseInfoModel unArhive:[BaseInfoModel class]];
-            if (_infoModel) return _infoModel;
-            _infoModel = [BaseInfoModel new];
-        }
+        _arcInfoModel = [ArchiveInfoModel unArhive:[ArchiveInfoModel class]];
     }
-    return _infoModel;
+    return _arcInfoModel;
 }
 
 @end

@@ -16,17 +16,16 @@
 @interface CheckSelfThirdViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
+@property (strong, nonatomic) ArchiveInfoModel *baseInfo;
 @end
 
 @implementation CheckSelfThirdViewController
 {
-    BaseInfoModel *_baseInfo;
+    NSInteger _noteSignNum;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _baseInfo = [BaseInfoModel unArhive:NSClassFromString([BaseInfoModel class])];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,24 +35,25 @@
 
 #pragma mark tableView Datasource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4 + _noteSignNum;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger number;
-    switch (section) {
-        case 0:
-            number = _baseInfo.infoArr.count;
-            break;
-        case 1:
-            number = self.checkList.count;
-            break;
-        case 2:
-            number = 1;
-            break;
-        default:
-            number = 1;
-            break;
+    if (section == 3 + _noteSignNum) {
+        number = 1;      //最后一行按钮cell
+    }else{
+        switch (section) {
+            case 0:
+                number = self.baseInfo.infoArr.count;
+                break;
+            case 1:
+                number = self.checkList.count;
+                break;
+            default:
+                number = 2;
+                break;
+        }
     }
     return number;
 }
@@ -80,7 +80,7 @@
     if (indexPath.section == 0) {
         cellId = @"BaseInfoCell";
         BaseInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        cell.model = _baseInfo.infoArr[indexPath.row];
+        cell.model = self.baseInfo.infoArr[indexPath.row];
         return cell;
     }
     //检查列表
@@ -94,17 +94,20 @@
     }
     //备注
     if (indexPath.section == 2) {
-        CheckNoteCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CheckNoteCell"];
-        return cell;
-    }
-    //签名
-    if (indexPath.section == 3) {
-        CheckSignCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CheckSignCell"];
+        UITableViewCell *cell;
+        if (indexPath.row == 0) {
+            CheckNoteCell *note = [tableView dequeueReusableCellWithIdentifier:@"CheckNoteCell"];
+            cell = note;
+        }else{
+             CheckSignCell *sign = [tableView dequeueReusableCellWithIdentifier:@"CheckSignCell"];
+            cell = sign;
+        }
+        
         return cell;
     }
     
     //下一步
-    if (indexPath.section == 4) {
+    if (indexPath.section == 3 + _noteSignNum) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NextStepCell"];
         return cell;
     }
@@ -141,4 +144,12 @@
     self.navigationController.navigationBar.clipsToBounds = isClear;
 }
 
+#pragma mark setter/getter
+-(ArchiveInfoModel *)baseInfo{
+    if (!_baseInfo) {
+        //解档
+        _baseInfo = [ArchiveInfoModel unArhive:[ArchiveInfoModel class]];
+    }
+    return _baseInfo;
+}
 @end

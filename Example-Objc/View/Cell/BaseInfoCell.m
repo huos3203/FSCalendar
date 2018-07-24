@@ -32,7 +32,6 @@
         _ibCheckNumberLabel.hidden = NO;
         _ibCheckNumberLabel.text = model.checkNum;
     }
-    
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

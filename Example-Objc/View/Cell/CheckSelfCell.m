@@ -44,21 +44,28 @@
 -(void)setCheckModel:(CheckSelfModel *)checkModel
 {
     _checkModel = checkModel;
-    //拍照按钮初始化
-    if (_checkModel.imgArr.count > 0) {
-        _ibImgNumberView.hidden = NO;
-        _ibPaizhaoButton.hidden = NO;
-        _ibImgNumberLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_checkModel.imgArr.count];
-        CameraModel *imgModel = _checkModel.imgArr[0];
-        [_ibPaizhaoButton setImage:imgModel.image forState:UIControlStateNormal];
-    }else{
-        _ibImgNumberView.hidden = YES;
-        if (checkModel.step == ThirdStep) {
-            _ibPaizhaoButton.hidden = YES;
-        }else{
+    _ibTitleLabel.text = checkModel.Text;
+    if (_checkModel.IsNeedPic.boolValue) {
+        //拍照按钮初始化
+        if (_checkModel.imgArr.count > 0) {
+            _ibImgNumberView.hidden = NO;
             _ibPaizhaoButton.hidden = NO;
-            [_ibPaizhaoButton setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
+            _ibImgNumberLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_checkModel.imgArr.count];
+            CameraModel *imgModel = _checkModel.imgArr[0];
+            [_ibPaizhaoButton setImage:imgModel.image forState:UIControlStateNormal];
+        }else{
+            _ibImgNumberView.hidden = YES;
+            if (checkModel.step == ThirdStep) {
+                _ibPaizhaoButton.hidden = YES;
+            }else{
+                _ibPaizhaoButton.hidden = NO;
+                [_ibPaizhaoButton setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
+            }
         }
+    }else{
+        //不支持拍照
+        _ibImgNumberView.hidden = YES;
+        _ibPaizhaoButton.hidden = YES;
     }
     
     //步骤三 初始化cell

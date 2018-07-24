@@ -16,7 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *ibCheckStatusImageView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 @property (strong, nonatomic) IBOutlet UIView *ibTableHeaderView;
-@property (strong, nonatomic) NSMutableArray *checkList;
+@property (strong, nonatomic) NSMutableArray<CheckSelfModel *> *checkList;
+@property (strong, nonatomic) NSMutableArray *inpectArr;
 
 @property (strong, nonatomic) IBOutlet ShadeBootomView *ibCameraView;
 @property (strong, nonatomic) IBOutlet CameraCollView *ibCameraCollectionView;
@@ -25,6 +26,7 @@
 
 @implementation CheckSelfSecondViewController
 {
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -111,9 +113,9 @@
         return cell;
     }
     CheckSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:@"checkSelfCell"];
-    CheckSelfModel *model = self.checkList[indexPath.row];
-    model.step = SecondStep;
-    cell.checkModel = model;
+    CheckSelfModel *check = self.checkList[indexPath.row];
+    check.step = SecondStep;
+    cell.checkModel = check;
     __weak typeof(self) weakSelf = self;
     cell.AlertCameraView = ^(NSArray *imgArr) {
         [weakSelf alertCameraView];
@@ -158,26 +160,41 @@
             _checkList =  [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         }else{
             _checkList = [NSMutableArray new];
-            CheckSelfModel *model1 = [CheckSelfModel new];
-            model1.step = SecondStep;
-            model1.status = OptionalCheck;
-            model1.type = PullType;
-            CheckSelfModel *model2 = [CheckSelfModel new];
-            model2.step = SecondStep;
-            model2.status = CheckPassed;
-            model2.type = PullType;
-            CheckSelfModel *model3 = [CheckSelfModel new];
-            model3.step = SecondStep;
-            model3.status = NotPassed;
-            model3.type = PullType;
-            CheckSelfModel *model4 = [CheckSelfModel new];
-            model4.step = SecondStep;
-            model4.status = CheckPassed;
-            model4.type = SwitchType;
-            [_checkList addObjectsFromArray:@[model1,model2,model3,model4]];
+            for (SelfInspectModel *model in self.inpectArr) {
+                CheckSelfModel *check = [[CheckSelfModel alloc] initWithModel:model];
+                [_checkList addObject:check];
+            }
         }
     }
     return _checkList;
+}
+-(NSMutableArray *)inpectArr
+{
+    if (!_inpectArr) {
+        _inpectArr = [NSMutableArray new];
+        SelfInspectModel *model1 = [SelfInspectModel new];
+        model1.IsNeedPic = NO;
+        model1.IsNotForAll = YES;
+        model1.Text = @"中华小当家";
+        model1.Id = @"12323";
+        SelfInspectModel *model2 = [SelfInspectModel new];
+        model2.IsNeedPic = NO;
+        model2.IsNotForAll = YES;
+        model2.Text = @"中华小当家";
+        model2.Id = @"12323";
+        SelfInspectModel *model3 = [SelfInspectModel new];
+        model3.IsNeedPic = YES;
+        model3.IsNotForAll = NO;
+        model3.Text = @"中华小当家";
+        model3.Id = @"12323";
+        SelfInspectModel *model4 = [SelfInspectModel new];
+        model4.IsNeedPic = YES;
+        model4.IsNotForAll = NO;
+        model4.Text = @"中华小当家";
+        model4.Id = @"12323";
+        [_inpectArr addObjectsFromArray:@[model1,model2,model3,model4]];
+    }
+    return _inpectArr;
 }
 
 @end

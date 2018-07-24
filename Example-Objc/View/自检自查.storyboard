@@ -212,7 +212,7 @@
                                         </state>
                                         <connections>
                                             <action selector="ibaNewRecordAction:" destination="PBO-Md-lak" eventType="touchUpInside" id="9ES-kR-z47"/>
-                                            <segue destination="GVZ-sz-oz0" kind="show" id="goN-BB-X7U"/>
+                                            <segue destination="GVZ-sz-oz0" kind="show" identifier="CheckSelfViewController" id="goN-BB-X7U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1765,13 +1765,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VM-UV-cHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="nax-8z-4jz" userLabel="自查报告" customClass="CheckReportViewController">
-                    <connections>
-                        <outlet property="ibCheckSectionHeaderView" destination="V46-96-E3F" id="sB5-RV-a2C"/>
-                        <outlet property="ibTableView" destination="VKw-3V-Co4" id="w87-3B-Qyb"/>
-                        <outlet property="view" destination="1sG-3N-pni" id="lio-gJ-sXV"/>
-                    </connections>
-                </customObject>
+                <customObject id="nax-8z-4jz" userLabel="自查报告" customClass="CheckReportViewController"/>
                 <view contentMode="scaleToFill" id="V46-96-E3F" userLabel="填报巡查检查项">
                     <rect key="frame" x="0.0" y="0.0" width="345" height="105"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

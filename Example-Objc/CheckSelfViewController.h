@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CheckSelfViewController : UIViewController
-
+@property (strong, nonatomic) NSString *storeId;
 @end
