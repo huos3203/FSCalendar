@@ -12,17 +12,15 @@
 #import "CheckSelfCell.h"
 #import "CheckNoteCell.h"
 #import "CheckSignCell.h"
+#import "CheckReportViewController.h"
 
 @interface CheckSelfThirdViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
-@property (strong, nonatomic) ArchiveInfoModel *baseInfo;
+
 @end
 
 @implementation CheckSelfThirdViewController
-{
-    NSInteger _noteSignNum;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,25 +33,24 @@
 
 #pragma mark tableView Datasource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4 + _noteSignNum;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger number;
-    if (section == 3 + _noteSignNum) {
-        number = 1;      //最后一行按钮cell
-    }else{
-        switch (section) {
-            case 0:
-                number = self.baseInfo.infoArr.count;
-                break;
-            case 1:
-                number = self.checkList.count;
-                break;
-            default:
-                number = 2;
-                break;
-        }
+    switch (section) {
+        case 0:
+            number = self.baseInfo.infoArr.count;
+            break;
+        case 1:
+            number = self.checkList.count;
+            break;
+        case 2:
+            number = 2;
+            break;
+        default:
+            number = 1;
+            break;
     }
     return number;
 }
@@ -107,15 +104,21 @@
     }
     
     //下一步
-    if (indexPath.section == 3 + _noteSignNum) {
+    if (indexPath.section == 3) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NextStepCell"];
         return cell;
     }
     return nil;
 }
+#pragma mark UI事件
 - (IBAction)ibaBackBarAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)ibaCreateReportAction:(id)sender {
+}
+
+
 
 -(void)viewWillAppear:(BOOL)animated
 {

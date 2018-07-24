@@ -31,6 +31,8 @@ typedef enum : NSUInteger {
 @class CameraModel;
 @interface CheckSelfModel : ArchiveModel
 -(instancetype)initWithModel:(SelfInspectModel *)model;
+@property (strong, nonatomic) NSString *Id;
+@property (strong, nonatomic) NSString *Pictures;
 @property (strong, nonatomic) NSString *Text;
 @property(assign,nonatomic)CheckStepType step;
 @property(assign,nonatomic)CheckSelfStatus status;

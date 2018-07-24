@@ -19,6 +19,7 @@
 -(instancetype)initWithModel:(SelfInspectModel *)model
 {
     if (self = [super init]) {
+        self.Id = model.Id;
         self.status = NotPassed;
         self.Text = model.Text;
         self.type = model.IsNotForAll?PullType:SwitchType;
@@ -29,14 +30,30 @@
 
 -(NSMutableArray<CameraModel *> *)imgArr
 {
-    CameraModel *item = [CameraModel new];
-    item.image = [UIImage imageNamed:@"camera"];
-    item.hideDel = NO;
-    CameraModel *item2 = [CameraModel new];
-    item2.image = [UIImage imageNamed:@"camera"];
-    item2.hideDel = YES;
-    _imgArr = [NSMutableArray arrayWithObjects:item, item2,nil];
+    if (!_imgArr) {
+        _imgArr = [NSMutableArray new];
+        CameraModel *item = [CameraModel new];
+        item.image = [UIImage imageNamed:@"camera"];
+        item.hideDel = NO;
+        CameraModel *item2 = [CameraModel new];
+        item2.image = [UIImage imageNamed:@"camera"];
+        item2.hideDel = YES;
+        _imgArr = [NSMutableArray arrayWithObjects:item, item2,nil];
+    }
     return _imgArr;
+}
+
+-(NSString *)Pictures
+{
+    if (!_Pictures) {
+        NSString *pics = @"";
+        for (CameraModel *model in self.imgArr) {
+            NSString *picurl = [NSString stringWithFormat:@"%@;",model.url];
+            pics = [pics stringByAppendingString:picurl];
+        }
+        _Pictures = pics;
+    }
+    return _Pictures;
 }
 @end
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ArchiveInfoModel;
 @interface CheckSelfThirdViewController : UIViewController
+//通过传递初始化
 @property (strong, nonatomic) NSMutableArray *checkList;
+//通过解档初始化
+@property (strong, nonatomic) ArchiveInfoModel *baseInfo;
 @end

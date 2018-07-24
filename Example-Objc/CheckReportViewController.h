@@ -6,8 +6,8 @@
 //  Copyright © 2018年 wenchaoios. All rights reserved.
 //
 
-#import "CheckSelfThirdViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface CheckReportViewController : CheckSelfThirdViewController
+@interface CheckReportViewController : UIViewController
 
 @end

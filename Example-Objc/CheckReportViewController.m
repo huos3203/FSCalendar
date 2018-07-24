@@ -7,13 +7,17 @@
 //
 
 #import "CheckReportViewController.h"
+#import "BaseInfoModel.h"
 
 @interface CheckReportViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+@property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
+@property (strong, nonatomic) IBOutlet UITableView *ibTableView;
 @end
 
 @implementation CheckReportViewController
-
+{
+    NSInteger _noteSignNum; //签名备注底部列表个数
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,9 +28,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+#pragma mark tableView Datasource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 4 + _noteSignNum;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    NSInteger number;
+    if (section == 3+_noteSignNum) {
+        return 1;
+    }else{
+        switch (section) {
+            case 0:
+//                number = self.baseInfo.infoArr.count;
+                break;
+            case 1:
+//                number = self.checkList.count;
+                break;
+            default:
+                number = 2;
+                break;
+        }
+    }
+    return number;
 }
 
 
