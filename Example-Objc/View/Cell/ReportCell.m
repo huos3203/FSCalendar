@@ -61,7 +61,9 @@
 }
 
 - (IBAction)ibAddRemarkAction:(id)sender {
-    
+    if (self.AlertRemarkBlock) {
+        self.AlertRemarkBlock(_ibRemarkLabel.text);
+    }
 }
 
 @end

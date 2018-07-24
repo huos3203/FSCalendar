@@ -41,7 +41,7 @@
 		05C79CA62107074E001E1729 /* InsOptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CA52107074E001E1729 /* InsOptModel.m */; };
 		05C79CAA210707AC001E1729 /* ReformSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CA9210707AC001E1729 /* ReformSignModel.m */; };
 		05C79CAD21070812001E1729 /* InsReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CAC21070812001E1729 /* InsReportModel.m */; };
-		05C79CB0210732F3001E1729 /* SaveRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CAF210732F3001E1729 /* SaveRemarkView.m */; };
+		05C79CB0210732F3001E1729 /* EditRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CAF210732F3001E1729 /* EditRemarkView.m */; };
 		05E8BA7720FED35D00AD8914 /* 自检自查.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */; };
 		05EF3E4F21057B41007F7E56 /* ArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E4E21057B41007F7E56 /* ArchiveModel.m */; };
 		05EF3E552105E5FA007F7E56 /* CheckReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E542105E5FA007F7E56 /* CheckReportViewController.m */; };
@@ -209,8 +209,8 @@
 		05C79CA9210707AC001E1729 /* ReformSignModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReformSignModel.m; sourceTree = "<group>"; };
 		05C79CAB21070812001E1729 /* InsReportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsReportModel.h; sourceTree = "<group>"; };
 		05C79CAC21070812001E1729 /* InsReportModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsReportModel.m; sourceTree = "<group>"; };
-		05C79CAE210732F3001E1729 /* SaveRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveRemarkView.h; sourceTree = "<group>"; };
-		05C79CAF210732F3001E1729 /* SaveRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveRemarkView.m; sourceTree = "<group>"; };
+		05C79CAE210732F3001E1729 /* EditRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditRemarkView.h; sourceTree = "<group>"; };
+		05C79CAF210732F3001E1729 /* EditRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditRemarkView.m; sourceTree = "<group>"; };
 		05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "自检自查.storyboard"; sourceTree = "<group>"; };
 		05EF3E4D21057B41007F7E56 /* ArchiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchiveModel.h; sourceTree = "<group>"; };
 		05EF3E4E21057B41007F7E56 /* ArchiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchiveModel.m; sourceTree = "<group>"; };
@@ -356,8 +356,8 @@
 				057E6FCC2102CC9E00035C99 /* CameraCell.m */,
 				057E6FCE2102D08C00035C99 /* CameraCollView.h */,
 				057E6FCF2102D08C00035C99 /* CameraCollView.m */,
-				05C79CAE210732F3001E1729 /* SaveRemarkView.h */,
-				05C79CAF210732F3001E1729 /* SaveRemarkView.m */,
+				05C79CAE210732F3001E1729 /* EditRemarkView.h */,
+				05C79CAF210732F3001E1729 /* EditRemarkView.m */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -1022,7 +1022,7 @@
 				3055B1C31DA9323A002AFA13 /* FSCalendarExtensions.m in Sources */,
 				057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */,
 				3031F3EF1CDEDFC500C174D7 /* DIYExampleViewController.m in Sources */,
-				05C79CB0210732F3001E1729 /* SaveRemarkView.m in Sources */,
+				05C79CB0210732F3001E1729 /* EditRemarkView.m in Sources */,
 				05C79CA62107074E001E1729 /* InsOptModel.m in Sources */,
 				EE52AE181B91E68A00016662 /* FSCalendarScopeExampleViewController.m in Sources */,
 				30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */,

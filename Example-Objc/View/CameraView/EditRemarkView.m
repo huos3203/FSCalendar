@@ -6,14 +6,14 @@
 //  Copyright © 2018年 wenchaoios. All rights reserved.
 //
 
-#import "SaveRemarkView.h"
+#import "EditRemarkView.h"
 
-@interface SaveRemarkView()
+@interface EditRemarkView()
 @property (strong, nonatomic) IBOutlet UIButton *ibSaveBut;
 
 @end
 
-@implementation SaveRemarkView
+@implementation EditRemarkView
 
 -(void)awakeFromNib
 {

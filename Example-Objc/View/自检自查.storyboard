@@ -2169,6 +2169,7 @@
                         <outlet property="ibCameraCollectionView" destination="46Z-eD-bhY" id="6jt-kq-asr"/>
                         <outlet property="ibCameraView" destination="dHQ-sx-AnS" id="tw7-XV-wRz"/>
                         <outlet property="ibCheckSectionHeaderView" destination="5Lg-Rd-dOu" id="3Ou-bC-j3g"/>
+                        <outlet property="ibEditRemarkView" destination="ilA-Y8-Pzs" id="HVd-it-UGm"/>
                         <outlet property="ibTableView" destination="SPP-HO-DdU" id="WSv-D8-BvK"/>
                     </connections>
                 </viewController>
@@ -2337,7 +2338,7 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <gestureRecognizers/>
                         </view>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="260" placeholderIntrinsicHeight="70" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-Y8-Pzs" userLabel="添加备注" customClass="SaveRemarkView">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="260" placeholderIntrinsicHeight="70" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-Y8-Pzs" userLabel="添加备注" customClass="EditRemarkView">
                             <rect key="frame" x="20" y="134.33333333333337" width="280" height="300"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="录入整改措施落实情况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erP-aT-QSd">

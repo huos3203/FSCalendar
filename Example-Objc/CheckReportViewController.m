@@ -14,7 +14,7 @@
 #import "CheckNoteCell.h"
 #import "CameraCollView.h"
 #import "ReportCell.h"
-
+#import "EditRemarkView.h"
 @interface CheckReportViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *ibCheckSectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *ibTableView;
@@ -26,6 +26,8 @@
 @property (strong, nonatomic) ArchiveInfoModel *baseInfo;
 
 @property (strong, nonatomic) IBOutlet ShadeBootomView *ibAddRemarkView;
+@property (strong, nonatomic) IBOutlet EditRemarkView *ibEditRemarkView;
+
 @end
 
 @implementation CheckReportViewController
@@ -107,6 +109,9 @@
             [weakSelf alertCameraView];
             weakSelf.ibCameraCollectionView.imgArr = [imgArr mutableCopy];
         };
+        cell.AlertRemarkBlock = ^(NSString *str) {
+            [weakSelf alertRemarkView];
+        };
         return cell;
     }
     //备注
@@ -135,6 +140,20 @@
                     }];
 }
 
+-(void)alertRemarkView
+{
+    _ibAddRemarkView.frame = [UIScreen mainScreen].bounds;
+    _ibAddRemarkView.alpha = 0;
+    [self.view addSubview:_ibAddRemarkView];
+    [UIView transitionWithView:_ibEditRemarkView
+                      duration:.5
+                       options:UIViewAnimationOptionTransitionFlipFromTop
+                    animations:^{
+                        _ibAddRemarkView.alpha = 1;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
+}
 #pragma mark setter/getter
 -(InsReportModel *)reportModel
 {

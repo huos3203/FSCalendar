@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SaveRemarkView : UIView
+@interface EditRemarkView : UIView
 
 @end
