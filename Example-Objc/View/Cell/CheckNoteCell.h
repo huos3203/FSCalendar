@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ReformSignModel;
 @interface CheckNoteCell : UITableViewCell
-
+@property (strong, nonatomic) ReformSignModel *model;
 @end

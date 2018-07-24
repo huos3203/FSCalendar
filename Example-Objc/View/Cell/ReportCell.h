@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class InsOptModel;
 @interface ReportCell : UITableViewCell
-
+@property (strong, nonatomic) InsOptModel *model;
+//拍照广场
+@property (strong, nonatomic) void(^AlertCameraView)(NSArray *);
+@property (strong, nonatomic) void (^AlertRemarkBlock)(NSString *);
 @end

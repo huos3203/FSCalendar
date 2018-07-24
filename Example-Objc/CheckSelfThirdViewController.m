@@ -11,7 +11,6 @@
 #import "BaseInfoCell.h"
 #import "CheckSelfCell.h"
 #import "CheckNoteCell.h"
-#import "CheckSignCell.h"
 #import "CheckReportViewController.h"
 
 @interface CheckSelfThirdViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -44,9 +43,6 @@
             break;
         case 1:
             number = self.checkList.count;
-            break;
-        case 2:
-            number = 2;
             break;
         default:
             number = 1;
@@ -91,16 +87,8 @@
     }
     //备注
     if (indexPath.section == 2) {
-        UITableViewCell *cell;
-        if (indexPath.row == 0) {
-            CheckNoteCell *note = [tableView dequeueReusableCellWithIdentifier:@"CheckNoteCell"];
-            cell = note;
-        }else{
-             CheckSignCell *sign = [tableView dequeueReusableCellWithIdentifier:@"CheckSignCell"];
-            cell = sign;
-        }
-        
-        return cell;
+        CheckNoteCell *note = [tableView dequeueReusableCellWithIdentifier:@"CheckNoteCell"];
+        return note;
     }
     
     //下一步

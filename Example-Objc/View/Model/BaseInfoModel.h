@@ -18,14 +18,14 @@
 @interface ArchiveInfoModel:ArchiveModel
 @property (strong, nonatomic) NSArray<BaseCellModel *> *infoArr;
 @property (strong, nonatomic) NSString *StoreId;
-@property (strong, nonatomic) NSString *StoreName;  //storeName
+@property (strong, nonatomic) NSString *StoreName; 
 @property (strong, nonatomic) NSString *UserId;
 @property (strong, nonatomic) NSString *UserName;
 @property (strong, nonatomic) NSString *UserIcon;
-@property (strong, nonatomic) NSString *InspectDate;    //checkDate
-@property (strong, nonatomic) NSString *YearTimes;   //checkNum
-@property (strong, nonatomic) NSString *InspectTypeName; //checkType
-@property (strong, nonatomic) NSString *StoreTypeName;//storeType
+@property (strong, nonatomic) NSString *InspectDate;
+@property (strong, nonatomic) NSString *YearTimes;
+@property (strong, nonatomic) NSString *InspectTypeName;
+@property (strong, nonatomic) NSString *StoreTypeName;
 @property (strong, nonatomic) NSString *StoreSecTypeName; //规模
 
 @end

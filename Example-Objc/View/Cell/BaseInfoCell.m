@@ -24,6 +24,7 @@
 }
 -(void)setModel:(BaseCellModel *)model
 {
+    _model = model;
     _ibCheckNumberLabel.hidden = YES;
     _ibIconImageView.image = [UIImage imageNamed:model.icon];
     _ibNameLabel.text = model.name;

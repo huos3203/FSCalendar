@@ -39,7 +39,7 @@
         [arr addObject:_StoreName];
         [arr addObject:_InspectTypeName];
         [arr addObject:_InspectDate];
-        [arr addObject:_InspectTypeName];
+        [arr addObject:_StoreTypeName];
         [arr addObject:_YearTimes];
         _nameArr = [arr copy];
     }

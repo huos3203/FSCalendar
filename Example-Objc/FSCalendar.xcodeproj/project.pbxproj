@@ -20,7 +20,6 @@
 		053019DA210340DF0078F59E /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
 		053019DB210340DF0078F59E /* CheckSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7020FF435B003744A5 /* CheckSelfCell.m */; };
 		053019DC210340DF0078F59E /* CheckNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800DE2100875500765222 /* CheckNoteCell.m */; };
-		053019DD210340DF0078F59E /* CheckSignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800E12100876900765222 /* CheckSignCell.m */; };
 		053019DE210340E50078F59E /* CameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FD32102D46800035C99 /* CameraModel.m */; };
 		053019DF210340E50078F59E /* CameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCC2102CC9E00035C99 /* CameraCell.m */; };
 		053019E0210340E50078F59E /* CameraCollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E6FCF2102D08C00035C99 /* CameraCollView.m */; };
@@ -33,17 +32,19 @@
 		05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D421006D5900765222 /* CheckSelfThirdViewController.m */; };
 		05B800DA21006DC400765222 /* BaseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800D921006DC400765222 /* BaseInfoCell.m */; };
 		05B800DF2100875500765222 /* CheckNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800DE2100875500765222 /* CheckNoteCell.m */; };
-		05B800E22100876900765222 /* CheckSignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B800E12100876900765222 /* CheckSignCell.m */; };
 		05BD8C6520FEF166003744A5 /* IBInspectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6420FEF166003744A5 /* IBInspectableView.m */; };
 		05BD8C6820FEFFFA003744A5 /* UIImageViewDotLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */; };
 		05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6A20FF1594003744A5 /* CheckSelfViewController.m */; };
 		05BD8C6E20FF3804003744A5 /* CheckSelfSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C6D20FF3804003744A5 /* CheckSelfSecondViewController.m */; };
 		05BD8C7120FF435B003744A5 /* CheckSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7020FF435B003744A5 /* CheckSelfCell.m */; };
 		05BD8C7520FF4E65003744A5 /* CheckSelfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */; };
+		05C79CA62107074E001E1729 /* InsOptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CA52107074E001E1729 /* InsOptModel.m */; };
+		05C79CAA210707AC001E1729 /* ReformSignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CA9210707AC001E1729 /* ReformSignModel.m */; };
+		05C79CAD21070812001E1729 /* InsReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CAC21070812001E1729 /* InsReportModel.m */; };
+		05C79CB0210732F3001E1729 /* SaveRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C79CAF210732F3001E1729 /* SaveRemarkView.m */; };
 		05E8BA7720FED35D00AD8914 /* 自检自查.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */; };
 		05EF3E4F21057B41007F7E56 /* ArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E4E21057B41007F7E56 /* ArchiveModel.m */; };
 		05EF3E552105E5FA007F7E56 /* CheckReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E542105E5FA007F7E56 /* CheckReportViewController.m */; };
-		05EF3E582105F5F3007F7E56 /* ReportCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E572105F5F3007F7E56 /* ReportCellModel.m */; };
 		05EF3E5B2105F61E007F7E56 /* ReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF3E5A2105F61E007F7E56 /* ReportCell.m */; };
 		05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0120FDC6BC00CB9712 /* PatorlCalendarViewController.m */; };
 		05FD8F0520FDE38000CB9712 /* CalendarBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD8F0420FDE38000CB9712 /* CalendarBottomCell.m */; };
@@ -190,8 +191,6 @@
 		05B800D921006DC400765222 /* BaseInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfoCell.m; sourceTree = "<group>"; };
 		05B800DD2100875500765222 /* CheckNoteCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckNoteCell.h; sourceTree = "<group>"; };
 		05B800DE2100875500765222 /* CheckNoteCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckNoteCell.m; sourceTree = "<group>"; };
-		05B800E02100876900765222 /* CheckSignCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSignCell.h; sourceTree = "<group>"; };
-		05B800E12100876900765222 /* CheckSignCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSignCell.m; sourceTree = "<group>"; };
 		05BD8C6320FEF166003744A5 /* IBInspectableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBInspectableView.h; sourceTree = "<group>"; };
 		05BD8C6420FEF166003744A5 /* IBInspectableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBInspectableView.m; sourceTree = "<group>"; };
 		05BD8C6620FEFFFA003744A5 /* UIImageViewDotLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewDotLine.h; sourceTree = "<group>"; };
@@ -204,13 +203,19 @@
 		05BD8C7020FF435B003744A5 /* CheckSelfCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelfCell.m; sourceTree = "<group>"; };
 		05BD8C7320FF4E65003744A5 /* CheckSelfModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSelfModel.h; sourceTree = "<group>"; };
 		05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSelfModel.m; sourceTree = "<group>"; };
+		05C79CA42107074E001E1729 /* InsOptModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsOptModel.h; sourceTree = "<group>"; };
+		05C79CA52107074E001E1729 /* InsOptModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsOptModel.m; sourceTree = "<group>"; };
+		05C79CA8210707AC001E1729 /* ReformSignModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReformSignModel.h; sourceTree = "<group>"; };
+		05C79CA9210707AC001E1729 /* ReformSignModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReformSignModel.m; sourceTree = "<group>"; };
+		05C79CAB21070812001E1729 /* InsReportModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsReportModel.h; sourceTree = "<group>"; };
+		05C79CAC21070812001E1729 /* InsReportModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsReportModel.m; sourceTree = "<group>"; };
+		05C79CAE210732F3001E1729 /* SaveRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveRemarkView.h; sourceTree = "<group>"; };
+		05C79CAF210732F3001E1729 /* SaveRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveRemarkView.m; sourceTree = "<group>"; };
 		05E8BA7620FED35D00AD8914 /* 自检自查.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "自检自查.storyboard"; sourceTree = "<group>"; };
 		05EF3E4D21057B41007F7E56 /* ArchiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchiveModel.h; sourceTree = "<group>"; };
 		05EF3E4E21057B41007F7E56 /* ArchiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchiveModel.m; sourceTree = "<group>"; };
 		05EF3E532105E5FA007F7E56 /* CheckReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckReportViewController.h; sourceTree = "<group>"; };
 		05EF3E542105E5FA007F7E56 /* CheckReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckReportViewController.m; sourceTree = "<group>"; };
-		05EF3E562105F5F3007F7E56 /* ReportCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportCellModel.h; sourceTree = "<group>"; };
-		05EF3E572105F5F3007F7E56 /* ReportCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCellModel.m; sourceTree = "<group>"; };
 		05EF3E592105F61E007F7E56 /* ReportCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportCell.h; sourceTree = "<group>"; };
 		05EF3E5A2105F61E007F7E56 /* ReportCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCell.m; sourceTree = "<group>"; };
 		05FD8F0020FDC6BC00CB9712 /* PatorlCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatorlCalendarViewController.h; sourceTree = "<group>"; };
@@ -351,6 +356,8 @@
 				057E6FCC2102CC9E00035C99 /* CameraCell.m */,
 				057E6FCE2102D08C00035C99 /* CameraCollView.h */,
 				057E6FCF2102D08C00035C99 /* CameraCollView.m */,
+				05C79CAE210732F3001E1729 /* SaveRemarkView.h */,
+				05C79CAF210732F3001E1729 /* SaveRemarkView.m */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -374,14 +381,13 @@
 		05B800DB21006F7A00765222 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05C79CA321070710001E1729 /* Report */,
 				05BD8C7320FF4E65003744A5 /* CheckSelfModel.h */,
 				05BD8C7420FF4E65003744A5 /* CheckSelfModel.m */,
 				05B800D0210065A900765222 /* BaseInfoModel.h */,
 				05B800D1210065A900765222 /* BaseInfoModel.m */,
 				05EF3E4D21057B41007F7E56 /* ArchiveModel.h */,
 				05EF3E4E21057B41007F7E56 /* ArchiveModel.m */,
-				05EF3E562105F5F3007F7E56 /* ReportCellModel.h */,
-				05EF3E572105F5F3007F7E56 /* ReportCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,8 +403,6 @@
 				05BD8C7020FF435B003744A5 /* CheckSelfCell.m */,
 				05B800DD2100875500765222 /* CheckNoteCell.h */,
 				05B800DE2100875500765222 /* CheckNoteCell.m */,
-				05B800E02100876900765222 /* CheckSignCell.h */,
-				05B800E12100876900765222 /* CheckSignCell.m */,
 				05EF3E592105F61E007F7E56 /* ReportCell.h */,
 				05EF3E5A2105F61E007F7E56 /* ReportCell.m */,
 			);
@@ -418,6 +422,19 @@
 				05BD8C6720FEFFFA003744A5 /* UIImageViewDotLine.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		05C79CA321070710001E1729 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				05C79CA42107074E001E1729 /* InsOptModel.h */,
+				05C79CA52107074E001E1729 /* InsOptModel.m */,
+				05C79CA8210707AC001E1729 /* ReformSignModel.h */,
+				05C79CA9210707AC001E1729 /* ReformSignModel.m */,
+				05C79CAB21070812001E1729 /* InsReportModel.h */,
+				05C79CAC21070812001E1729 /* InsReportModel.m */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		05E8BA7820FED6A100AD8914 /* Patrol */ = {
@@ -925,7 +942,6 @@
 				053019D2210340DA0078F59E /* BaseInfoModel.m in Sources */,
 				053019D4210340DA0078F59E /* UIImageViewDotLine.m in Sources */,
 				053019D6210340DA0078F59E /* CheckSelfViewController.m in Sources */,
-				053019DD210340DF0078F59E /* CheckSignCell.m in Sources */,
 				053019D5210340DA0078F59E /* PatorlCalendarViewController.m in Sources */,
 				053019DE210340E50078F59E /* CameraModel.m in Sources */,
 				053019D8210340DA0078F59E /* CheckSelfThirdViewController.m in Sources */,
@@ -967,7 +983,6 @@
 				EECA10F81BA9C0E400945B83 /* FullScreenExampleViewController.m in Sources */,
 				30DBE3C51DC641AD005A22B7 /* FSCalendarCalculator.m in Sources */,
 				EE638CC91B89DB940006DD1A /* CalendarConfigViewController.m in Sources */,
-				05B800E22100876900765222 /* CheckSignCell.m in Sources */,
 				30B0BAD01B8D8E23004B9476 /* FSCalendar.m in Sources */,
 				3065CAA81CD3506A006C218D /* FSCalendar+Deprecated.m in Sources */,
 				05FD8F0220FDC6BC00CB9712 /* PatorlCalendarViewController.m in Sources */,
@@ -995,6 +1010,8 @@
 				05B800D521006D5900765222 /* CheckSelfThirdViewController.m in Sources */,
 				30CEF9011C950C1F008EAFB1 /* FSCalendarTransitionCoordinator.m in Sources */,
 				05BD8C6B20FF1594003744A5 /* CheckSelfViewController.m in Sources */,
+				05C79CAD21070812001E1729 /* InsReportModel.m in Sources */,
+				05C79CAA210707AC001E1729 /* ReformSignModel.m in Sources */,
 				EEC9C03A1BDC9E7000383A07 /* FSCalendarCollectionView.m in Sources */,
 				057E6FD42102D46800035C99 /* CameraModel.m in Sources */,
 				301F79CC1DFD39E700D8631E /* FSCalendarDelegationProxy.m in Sources */,
@@ -1005,13 +1022,14 @@
 				3055B1C31DA9323A002AFA13 /* FSCalendarExtensions.m in Sources */,
 				057E6FD02102D08C00035C99 /* CameraCollView.m in Sources */,
 				3031F3EF1CDEDFC500C174D7 /* DIYExampleViewController.m in Sources */,
+				05C79CB0210732F3001E1729 /* SaveRemarkView.m in Sources */,
+				05C79CA62107074E001E1729 /* InsOptModel.m in Sources */,
 				EE52AE181B91E68A00016662 /* FSCalendarScopeExampleViewController.m in Sources */,
 				30024F951BD1015300B1C04C /* DelegateAppearanceViewController.m in Sources */,
 				EE638CC31B89DB6E0006DD1A /* LoadViewExampleViewController.m in Sources */,
 				30B0BAD31B8D8E23004B9476 /* FSCalendarHeaderView.m in Sources */,
 				F988B1CB1EA6054400609E59 /* RangePickerCell.m in Sources */,
 				05BD8C6E20FF3804003744A5 /* CheckSelfSecondViewController.m in Sources */,
-				05EF3E582105F5F3007F7E56 /* ReportCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

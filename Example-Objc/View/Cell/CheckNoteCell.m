@@ -7,6 +7,15 @@
 //
 
 #import "CheckNoteCell.h"
+#import "ReformSignModel.h"
+
+@interface CheckNoteCell()
+@property (strong, nonatomic) IBOutlet UILabel *ibNoteTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *ibSignTitleLabel;
+@property (strong, nonatomic) IBOutlet UIView *ibNoteView;
+@property (strong, nonatomic) IBOutlet UIButton *ibSignButton;
+
+@end
 
 @implementation CheckNoteCell
 
@@ -15,10 +24,12 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)setModel:(ReformSignModel *)model
+{
+    _model = model;
+    _ibNoteTitleLabel.text = [model.RoleName stringByAppendingString:@"意见"];
+    _ibSignTitleLabel.text = [model.RoleName stringByAppendingString:@"签字"];
+    [_ibSignButton setImage:[UIImage new] forState:UIControlStateNormal];
 }
 
 @end
